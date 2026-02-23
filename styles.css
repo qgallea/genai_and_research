@@ -1,0 +1,116 @@
+/* GenAI & Research — Course Website Styles */
+
+/* Slide images */
+.slide-image {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 90%;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Session cards on landing page */
+.session-table {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.session-table td,
+.session-table th {
+  padding: 0.6rem 1rem;
+  vertical-align: middle;
+}
+
+.session-table tr:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Status badges */
+.badge-complete {
+  background-color: #198754;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+}
+
+.badge-progress {
+  background-color: #ffc107;
+  color: #212529;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+}
+
+.badge-upcoming {
+  background-color: #6c757d;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+}
+
+/* Mid-term divider */
+.midterm-row {
+  background-color: #f0f4ff;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 2rem 0 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero .subtitle {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+
+/* Learning outcomes list */
+.outcomes-list {
+  list-style: none;
+  padding: 0;
+}
+
+.outcomes-list li {
+  padding: 0.5rem 0 0.5rem 2rem;
+  position: relative;
+}
+
+.outcomes-list li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0.5rem;
+  color: #198754;
+  font-weight: bold;
+}
+
+/* Assessment info */
+.assessment-box {
+  background-color: #f8f9fa;
+  border-left: 4px solid #0d6efd;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .slide-image {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+}

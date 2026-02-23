@@ -1,0 +1,198 @@
+---
+title: "How This Site Is Built"
+subtitle: "From LaTeX slides to web pages with Claude Code"
+---
+
+::: {.callout-note}
+## What is this page?
+This website has been automatically created with an entire agentic AI workflow I've created (Claude Code). In short, I setup a plan, create AI agents with different roles (my AI Teaching Assistant team) and define workflow (how they collaborate).
+Then, I can call the team to work on a task in a structured way independently unless I mention that I want to give inputs (for example after the fact-check step, I want to double check manually).
+In short, after I teaching a class, I call a single command that I've created "/build-course-page" and specify which course it was today (e.g. "/build-course-page 01_intro).
+The AI Teaching Assistant team will fetch my slides (pdf + LaTeX) as well as the transcript (I record the class for this purpose) and it will automatically and independently create an entire page with the content of my course (connecting slides with what I said, fact-checking etc.).
+The team works about 1h alone, allowing me to do something else. Without Claude Code I would probably not be able to share the content of this class at least not in such an accessible way. 
+This page explains the tools, the architecture, and the full process.
+:::
+
+## What Is Claude Code?
+
+[Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) is a command-line tool by Anthropic that lets you work with Claude directly in your terminal. Unlike the chat interface at claude.ai, Claude Code can **read and write files**, **run shell commands**, **search the web**, and **execute multi-step tasks** autonomously on your local machine.
+
+Think of it as having a capable assistant sitting inside your project folder. You describe what you want, and Claude Code figures out how to do it — reading your files, making edits, running builds, and reporting back.
+
+### Key Concepts
+
+**The CLAUDE.md file** is the project's memory. It sits at the root of the project and contains instructions, conventions, and context that Claude Code reads at the start of every session. For this project, the CLAUDE.md describes the course structure, LaTeX conventions, slide architecture, and coding standards. It ensures consistency across sessions.
+
+**Agents** are specialized sub-processes that Claude Code can launch to handle specific tasks. Each agent has a defined role and set of tools. This project uses several:
+
+| Agent | Role |
+|-------|------|
+| `content-expert` | Domain expert on GenAI and research methodology. Handles transcript assembly, prose polishing, faithfulness checking, and fact-checking. |
+| `pedagogical-reviewer` | Reviews content for learning alignment, cognitive load, and narrative structure. Handles the final structure pass. |
+| `slide-designer` | LaTeX Beamer specialist for formatting and visual layout. |
+| `paper-analyst` | Reads and synthesizes academic papers for course integration. |
+
+When a task requires domain expertise (e.g., "check if this transcript accurately reflects what was said"), Claude Code delegates it to the appropriate agent rather than handling everything itself.
+
+**Skills (slash commands)** are reusable workflows triggered by a `/command`. They package a complex multi-step process into a single invocation. The key skill for this site is:
+
+```
+/build-course-page 01_intro
+```
+
+This single command triggers the entire pipeline described below — from validating inputs through 5 content passes to producing the final web page.
+
+Other skills available in this project include `/compile` (build LaTeX slides), `/connect-paper` (link a paper to slides), `/check-freshness` (search for outdated content), and `/review-alignment` (check slides against learning outcomes).
+
+## The Pipeline
+
+```{mermaid}
+flowchart TD
+    A["LaTeX slides (.tex + .pdf)"] --> P["Pre-processing"]
+    B["Lecture transcript (.txt)"] --> P
+    P --> D1["Pass 1 — Raw Assembly"]
+    D1 --> D2["Pass 2 — Prose Polish"]
+    D2 --> D3["Pass 3 — Faithfulness Check"]
+    D3 --> D4["Pass 4 — Fact-Check"]
+    D4 --> D5["Pass 5 — Structure Review"]
+    D5 --> O["Published Quarto page"]
+
+    style A fill:#e8f4f8,stroke:#333
+    style B fill:#e8f4f8,stroke:#333
+    style P fill:#fff3cd,stroke:#333
+    style D1 fill:#f0f0f0,stroke:#333
+    style D2 fill:#f0f0f0,stroke:#333
+    style D3 fill:#f0f0f0,stroke:#333
+    style D4 fill:#f0f0f0,stroke:#333
+    style D5 fill:#f0f0f0,stroke:#333
+    style O fill:#d4edda,stroke:#333
+```
+
+### Inputs
+
+Each lecture session lives in its own folder:
+
+```
+slides/01_intro/
+├── 01_intro.tex          # LaTeX Beamer source
+├── 01_intro.pdf          # Compiled slides
+├── figure/               # Figures used in the slides
+└── transcript/
+    └── lecture.txt        # Raw lecture transcript
+```
+
+The **LaTeX source** contains the slide content, structure, and titles. The **transcript** is a raw recording of what was said during the lecture — unedited spoken text.
+
+### Pre-processing
+
+Before the content passes run, three things happen:
+
+1. **Compile LaTeX to PDF** — `pdflatex` compiles the `.tex` source into a slide deck
+2. **Convert PDF to PNG images** — `pdftoppm` splits the PDF into one 200 DPI image per slide
+3. **Extract slide titles** — The `.tex` source is parsed to build an ordered list of slide titles
+
+### Pass 1 — Raw Assembly
+
+**Agent**: `content-expert`
+
+The first pass reads the entire transcript and matches each segment to the slide it belongs to. Matching uses:
+
+- **Slide title mentions** in the spoken text
+- **Transition markers** ("next slide", "so now let's look at", "moving on")
+- **Topic coherence** between what is being said and what the slide shows
+
+The output is a rough draft where each slide has its image and the corresponding raw transcript underneath. No polishing — accuracy is the only goal.
+
+### Pass 2 — Prose Polisher
+
+**Agent**: `content-expert`
+
+The second pass transforms spoken language into readable prose:
+
+- Removes filler words (*um, uh, like, you know, so basically*)
+- Fixes grammar and merges fragmented sentences
+- Shortens without losing meaning — targeting ~60–70% of original length
+- **Bolds** key terms on first mention
+- Adds a blockquote with the key insight for each section
+- Converts spoken math to LaTeX notation
+
+The instructor's voice is preserved: examples, anecdotes, and humor stay in.
+
+### Pass 3 — Faithfulness Checker
+
+**Agent**: `content-expert`
+
+The third pass is a safety net. It reads both the polished draft and the original transcript, section by section, and checks:
+
+- Was any meaning distorted during polishing?
+- Were important points dropped?
+- Were claims added that the instructor didn't make?
+- Were numbers, names, or technical terms changed?
+
+Any deviation is corrected and logged.
+
+### Pass 4 — Fact-Checker
+
+**Agent**: `content-expert` (with web search)
+
+The fourth pass verifies factual claims: statistics, dates, paper references, benchmark results, company names, and historical facts. It cross-checks against known sources and runs **web searches** for recent or uncertain claims.
+
+::: {.callout-important}
+The fact-checker produces a **report only** — it never modifies the page directly. The instructor reviews each flagged issue and decides what to correct. This keeps the human in the loop for all factual decisions.
+:::
+
+### Pass 5 — Structure Reviewer
+
+**Agent**: `pedagogical-reviewer`
+
+The final pass gives the page a clear narrative arc:
+
+- Adds a **Lecture Overview** callout at the top
+- Smooths transitions between sections
+- Adds **Key Takeaways** at the end
+- Groups slides into logical sections (~10–15 per lecture) so the table of contents is clean and navigable
+- Removes any internal comments from earlier passes
+
+## Output
+
+The pipeline produces a [Quarto](https://quarto.org/) Markdown page with this structure:
+
+```
+---
+title: "The AI Revolution"
+subtitle: "Session 01 — GenAI & Research"
+---
+
+Lecture Overview (callout)
+
+## Section Title          ← appears in table of contents
+
+  Slide image
+  Polished transcript text
+  Key insight (blockquote)
+
+  ---
+
+  ### Slide Title         ← visible on page, not in TOC
+
+  Slide image
+  Polished transcript text
+
+  ---
+
+## Next Section Title
+  ...
+
+Key Takeaways (callout)
+```
+
+Each lecture page embeds the slide images inline, so the reader sees the slides and the instructor's explanation together — like an annotated lecture.
+
+## Tools Used
+
+| Tool | Role |
+|------|------|
+| [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) | Orchestrates the pipeline, runs agents for all 5 content passes |
+| [Quarto](https://quarto.org/) | Renders Markdown pages into the static website |
+| LaTeX / pdflatex | Compiles Beamer slide decks |
+| pdftoppm | Converts PDF slides to PNG images |

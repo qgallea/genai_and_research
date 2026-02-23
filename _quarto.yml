@@ -1,0 +1,55 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "GenAI and Research"
+  description: "Generative AI tools for rigorous research workflows"
+  navbar:
+    left:
+      - text: Home
+        href: index.qmd
+      - text: Claude Code Setup
+        href: setup.qmd
+      - text: Lectures
+        menu:
+          - text: "01 — The AI Revolution"
+            href: lectures/01_intro.qmd
+          - text: "02 — Deep Dive into LLMs"
+            href: lectures/02_deep_dive.qmd
+          - text: "03 — Everyday Life with GenAI"
+            href: lectures/03_everyday_life.qmd
+          - text: "04 — Reading Scientific Research"
+            href: lectures/04_reading.qmd
+          - text: "05 — Literature Review"
+            href: lectures/05_lit_review.qmd
+          - text: "06 — Custom GPT / Copilot"
+            href: lectures/06_custom_GPT.qmd
+          - text: "07 — Creativity & Brainstorming"
+            href: lectures/07_creativity.qmd
+          - text: "---"
+          - text: "Mid-term Evaluation"
+          - text: "---"
+          - text: "08 — Coding & Data Analysis"
+            href: lectures/08_coding.qmd
+          - text: "09 — Deep Research & Web Search"
+            href: lectures/09_deep_research.qmd
+          - text: "10 — Scientific Writing"
+            href: lectures/10_writing.qmd
+          - text: "11 — Paper Review / Referee"
+            href: lectures/11_paper_review.qmd
+          - text: "12 — Presenting"
+            href: lectures/12_presenting.qmd
+          - text: "13 — Claude Code & Agentic AI"
+            href: lectures/13_agentic_ai.qmd
+  page-footer:
+    center: "GenAI & Research — Quentin Gallea — [The Causal Mindset](https://thecausalmindset.com/)"
+
+format:
+  html:
+    theme:
+      light: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    smooth-scroll: true

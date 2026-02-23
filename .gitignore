@@ -1,0 +1,18 @@
+# Quarto build output
+_site/
+site_libs/
+.quarto/
+
+# Intermediate drafts
+lectures/_drafts/
+
+# OS files
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# Windows shortcuts
+*.lnk
+
+# Temp files
+~$*

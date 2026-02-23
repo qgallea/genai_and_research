@@ -1,0 +1,60 @@
+---
+title: "GenAI and Research"
+---
+
+::: {.hero}
+# GenAI and Research
+
+::: {.subtitle}
+When GenAI can write papers, what should you do?
+:::
+
+**Quentin Gallea** — [The Causal Mindset](https://thecausalmindset.com/){target="_blank"}
+:::
+
+## About
+
+This website shares lecture content from a course currently taught at the University of Neuchatel on how generative AI tools — large language models, coding agents, retrieval-augmented generation — are transforming research workflows in economics and the social sciences. The material follows the complete research cycle, from reading papers and reviewing literature to brainstorming hypotheses, analyzing data, writing, and presenting — exploring both traditional methods and GenAI tools at every stage.
+
+The goal is not just to *use* these tools, but to use them **responsibly and rigorously**, understanding their strengths, limitations, and the risks they introduce to scientific work.
+
+## What You'll Find Here
+
+::: {.outcomes-list}
+- Critical comparisons of traditional research methods with AI-assisted approaches
+- Practical guidance on using generative AI tools responsibly at each stage of the research process
+- An honest evaluation of the strengths, biases, and risks of AI tools applied to research
+:::
+
+## Sessions
+
+| # | Topic | Materials |
+|:---:|-------|:---------:|
+| 01 | [The AI Revolution](lectures/01_intro.qmd) | Available |
+| 02 | [Deep Dive into LLMs](lectures/02_deep_dive.qmd) | Coming soon |
+| 03 | [Everyday Life with GenAI](lectures/03_everyday_life.qmd) | Coming soon |
+| 04 | [Reading Scientific Research](lectures/04_reading.qmd) | Coming soon |
+| 05 | [Literature Review](lectures/05_lit_review.qmd) | Coming soon |
+| 06 | [Custom GPT / Copilot](lectures/06_custom_GPT.qmd) | Coming soon |
+| 07 | [Creativity & Brainstorming](lectures/07_creativity.qmd) | Coming soon |
+| 08 | [Coding & Data Analysis](lectures/08_coding.qmd) | Coming soon |
+| 09 | [Deep Research & Web Search](lectures/09_deep_research.qmd) | Coming soon |
+| 10 | [Scientific Writing](lectures/10_writing.qmd) | Coming soon |
+| 11 | [Paper Review / Referee](lectures/11_paper_review.qmd) | Coming soon |
+| 12 | [Presenting](lectures/12_presenting.qmd) | Coming soon |
+| 13 | [Claude Code & Agentic AI](lectures/13_agentic_ai.qmd) | Coming soon |
+
+: {.session-table}
+
+## Author
+
+**Quentin Gallea** brings deep expertise and a passion for causality to answering causal questions and applying Causal AI to real-world problems — particularly to help deploy reliable and safe AI strategies.
+
+- Trusted by professionals worldwide (e.g. Google, Amazon, Meta, mercado libre, iFood)
+- Advised C-suites and data leaders worldwide on causal inference and AI impact
+- Trained 15,000+ students and professionals across industries
+- Published research in top scientific journals
+- Speaker at leading international events: TEDx, Causal Data Science Meeting, Applied Machine Learning Days, National Association for Business Economics
+- Author of *The Causal Mindset Handbook*
+
+[thecausalmindset.com](https://thecausalmindset.com/)
