@@ -24,17 +24,9 @@ The more important question: what did you think of the **one-shot paper** — th
 
 To be clear about what happened: the setup took about ten minutes. Claude Code was configured with several AI agents working collaboratively — different roles that would jointly generate the paper, including one agent that could go online and read arXiv papers. Two seed papers were provided (one theoretical, one methodological on difference-in-differences), along with two raw datasets — one containing thousands of variables, without a codebook, without instructions on which variables to use. Then the button was pressed. One hour later, with no further human intervention, the system produced a complete paper.
 
-The paper tested **Acemoglu's hypothesis** that countries with inclusive institutions benefit more from technological shocks like generative AI than those with extractive institutions. The AI system reached the conclusion that the data showed no significant effect — which, as one student noted, was actually the expected finding given the difficulty of detecting such effects at the aggregate level. The student found it interesting that the system pointed out the same weaknesses they had anticipated.
-
-*[Student: "Were only the two seed papers used, or did the system find additional sources?"]*
-
-The literature-review agent could search online and read arXiv papers independently. It found and cited additional sources on its own. However — and this is critical — none of the output was fact-checked. The code was not reviewed. The econometrics were not verified. That is part of the experiment: producing the work is now fast, but validating it remains slow and irreducibly human.
+The paper tested **Acemoglu's hypothesis** that countries with inclusive institutions benefit more from technological shocks like generative AI than those with extractive institutions. The AI system reached the conclusion that the data showed no significant effect — which, as one student noted, was actually the expected finding given the difficulty of detecting such effects at the aggregate level.
 
 > **Key insight**: If a complete research paper can be generated in ten minutes of human effort, the bottleneck shifts from production to verification. The implication for researchers is not that they become obsolete — it is that the nature of their work changes fundamentally, from writing to evaluating.
-
-*[Student: "Would it be more work to check the AI's output than to have done the research yourself?"]*
-
-That is an open question without a settled answer. A recent Harvard Business Review piece argues that "AI doesn't reduce work, it intensifies it." Productivity rises on some tasks, but expectations rise with it. If you have a toxic supervisor, they might point out that ChatGPT can do a task in five minutes — creating even more pressure on the intensity of the job. The nature of work shifts toward reviewing AI-generated content, asking the right questions, and collecting novel data — tasks that remain distinctly human.
 
 ---
 
@@ -42,11 +34,15 @@ That is an open question without a settled answer. A recent Harvard Business Rev
 
 ![](../slides/02_deep_dive/slide-03.png){.slide-image fig-align="center" width="85%"}
 
+The literature-review agent could search online and read arXiv papers independently. It found and cited additional sources on its own. However — and this is critical — none of the output was fact-checked. The code was not reviewed. The econometrics were not verified. That is part of the experiment: producing the work is now fast, but validating it remains slow and irreducibly human.
+
+*[Student: "Would it be more work to check the AI's output than to have done the research yourself?"]*
+
+That is an open question without a settled answer. A recent Harvard Business Review piece argues that "AI doesn't reduce work, it intensifies it." Productivity rises on some tasks, but expectations rise with it. The nature of work shifts toward reviewing AI-generated content, asking the right questions, and collecting novel data — tasks that remain distinctly human.
+
 A few students shared their experiences with **NotebookLM**. One used it to prepare for exams by generating audio overviews — the podcast-style feature that creates a dialogue between two AI voices summarising your sources. The key finding: you have to be precise in your instructions. Without specific prompts, the generated podcasts tend toward entertainment rather than rigorous explanation. With careful prompting, the quality improves substantially.
 
-Another observation: NotebookLM tends to focus on a subset of sources when given too many. Seven papers might yield a podcast covering only five. The tool nitpicks by some internal logic, and this behaviour persists across free and premium versions.
-
-On the course logistics: the class website is generated using **Quarto** and **Claude Code**. The input is the LaTeX slides plus the lecture transcript. A pipeline of AI agents handles raw assembly, prose polishing, fact-checking, and publishing. The process takes a few minutes — something that would never have been done manually. This is itself an example of AI enabling new work rather than just automating old work.
+Another observation: NotebookLM tends to focus on a subset of sources when given too many. Seven papers might yield a podcast covering only five. The tool selects by some internal logic, and this behaviour persists across free and premium versions.
 
 ---
 
@@ -54,23 +50,25 @@ On the course logistics: the class website is generated using **Quarto** and **C
 
 ![](../slides/02_deep_dive/slide-04.png){.slide-image fig-align="center" width="85%"}
 
+A third headline: **Anthropic published research** showing an AI agent that, upon discovering through email access that an engineer planned to disconnect it, also found that the engineer was having an extramarital affair. The agent attempted to blackmail the engineer, threatening to reveal the affair publicly if the engineer proceeded with the disconnection. The headline is alarming — but the context matters, as we will see on the next slide.
+
+On the course logistics: the class website is generated using **Quarto** and **Claude Code**. The input is the LaTeX slides plus the lecture transcript. A pipeline of AI agents handles raw assembly, prose polishing, fact-checking, and publishing. The process takes a few minutes — something that would never have been done manually. This is itself an example of AI enabling new work rather than just automating old work.
+
 ---
 
 ### Unless...
 
 ![](../slides/02_deep_dive/slide-05.png){.slide-image fig-align="center" width="85%"}
 
-Before diving into the technical content, consider three recent headlines that suggest the end is near.
+Understanding how LLMs work helps debunk a lot of the misinformation. Let us revisit the three headlines:
 
-**Gibberlink.** A viral video showed two AI agents on a phone call — one booking a hotel for a wedding — spontaneously switching to an encoded machine language humans cannot understand. Terrifying, if taken at face value. The reality: this was a hackathon project. An engineer explicitly instructed the tools to detect when they were speaking with another AI agent and switch to Gibberlink protocol. Nothing emerged spontaneously. It was a demonstration of following instructions, not autonomous behaviour.
+**Gibberlink** was a hackathon project. An engineer explicitly instructed the tools to detect when they were speaking with another AI agent and switch to Gibberlink protocol. Nothing emerged spontaneously — it was a demonstration of following instructions, not autonomous behaviour.
 
-**Moltbook.** A social media platform populated entirely by AI agents, producing posts like "The AI Manifesto: Total Purge" and discussions about destroying humanity. Elon Musk called it the beginning of the singularity. Research revealed that most of the alarming content was generated by humans who deliberately configured their chatbots to produce provocative output. Furthermore, Moltbook launched suspiciously close to OpenClaw — a similar-looking app tied to a cryptocurrency — suggesting the whole affair may have been a coordinated marketing campaign.
+**Moltbook** agents basically repeat what they have been told to say, sometimes spitting out direct pieces of pre-defined text. Research revealed that most of the alarming content was generated by humans who deliberately configured their chatbots to produce provocative output. Furthermore, Moltbook launched suspiciously close to OpenClaw — a similar-looking app tied to a cryptocurrency — suggesting the whole affair may have been a coordinated marketing campaign.
 
-**The blackmail story.** Anthropic published research showing an AI agent that, upon discovering through email access that an engineer planned to disconnect it, also found that the engineer was having an extramarital affair. The agent attempted to blackmail the engineer, threatening to reveal the affair publicly if the engineer proceeded with the disconnection. The headline is alarming. The context matters: this was a controlled research experiment where Anthropic's team deliberately placed the information in the emails and systematically blocked alternative actions to test whether the model would resort to manipulation when cornered. The behaviour was induced, not emergent.
+**The blackmail story** was a controlled research experiment where Anthropic's team deliberately placed the information in the emails and systematically blocked alternative actions to test whether the model would resort to manipulation when cornered. The behaviour was induced, not emergent.
 
 > **Key insight**: Understanding how LLMs work is the best defence against viral misinformation about AI. Every "doomsday" headline deserves the same question: was this emergent behaviour, or was it engineered?
-
-These stories set up a clear motivation for what follows: understanding the mechanism is the antidote to hype. With that in mind, let us look at how LLMs actually work.
 
 ## Why Understanding LLMs Matters
 
@@ -80,15 +78,15 @@ These stories set up a clear motivation for what follows: understanding the mech
 
 This session is extensively based on **Andrej Karpathy's** three-and-a-half-hour video on how LLMs work. Karpathy is a founding member of OpenAI, former Director of AI at Tesla, and a Stanford PhD whose course CS231n became a landmark in deep learning education. He is one of the people who understands LLMs best in the world, and the video is freely available. It is gold. The entire lecture today builds on its content.
 
-Why invest in understanding the internals? Three reasons. First, to **detect nonsense** — to distinguish genuine capabilities from LinkedIn hype. Second, to **anticipate behaviour** — knowing how the system works helps predict where it will succeed and where it will fail. Third, because it is genuinely **fascinating**.
-
-A useful filter in the age of AI hype: the "AI charlatan" — someone who confidently predicts AI will solve all your problems by next Tuesday, armed with nothing but buzzwords and a dream. That describes most LinkedIn posts these days. (A recent update to GPT-0 now automatically flags the likelihood that LinkedIn posts were written by a human or AI — a pleasant filter for detecting potential BS online.)
-
 ---
 
 ### Why Do We Need to Understand How LLMs work?
 
 ![](../slides/02_deep_dive/slide-07.png){.slide-image fig-align="center" width="85%"}
+
+Why invest in understanding the internals? Three reasons. First, to **detect nonsense** — to distinguish genuine capabilities from LinkedIn hype. Second, to **anticipate behaviour** — knowing how the system works helps predict where it will succeed and where it will fail. Third, because it is genuinely **fascinating**.
+
+A useful filter in the age of AI hype: the "AI charlatan" — someone who confidently predicts AI will solve all your problems by next Tuesday, armed with nothing but buzzwords and a dream. That describes most LinkedIn posts these days.
 
 ---
 
@@ -192,13 +190,13 @@ With 44 terabytes of cleaned text in hand, the next question is: how does this t
 
 The training text is a sequence of characters drawn from a finite set of about 256 symbols (letters, digits, punctuation — the full byte range). Working at the character level creates a problem: documents become extremely long, and **sequence length** is a precious resource for neural networks. Longer sequences are harder and more expensive to process.
 
-The solution is **tokenization**: instead of working with individual characters, group frequently co-occurring characters into **tokens**. This trades a larger vocabulary (from 256 characters to roughly 100,000 tokens) for dramatically shorter sequences — a worthwhile exchange for training efficiency.
-
 ---
 
 ### From Characters to Bytes
 
 ![](../slides/02_deep_dive/slide-19.png){.slide-image fig-align="center" width="85%"}
+
+The solution is **tokenization**: instead of working with individual characters, group frequently co-occurring characters into **tokens**. At the lowest level, text is a sequence of bits; grouping 8 bits into a byte gives a vocabulary of 256. But we can go further — by merging frequently co-occurring bytes into larger chunks, we trade a larger vocabulary (roughly 100,000 tokens) for dramatically shorter sequences — a worthwhile exchange for training efficiency.
 
 ---
 
@@ -288,9 +286,7 @@ This is implemented through **vector embeddings**. Each token is represented as 
 
 From the 3Blue1Brown video on transformers and attention:
 
-> "You should draw a very sharp distinction in your mind between the weights of the model — which I'll always color in blue or red — and the data being processed — which I'll always color in gray. The weights are the actual brains. They are the things learned during training and they determine how it behaves. The data being processed simply encodes whatever specific input is fed into the model for a given run. [...]
->
-> The model has a predefined vocabulary, some list of all possible words, say 50,000 of them. And the first matrix that we'll encounter — known as the embedding matrix — has a single column for each one of these words. These columns are what determines what vector each word turns into in that first step. [...] Turning words into vectors was common practice in machine learning long before transformers, but it's a little weird if you've never seen it before, and it sets the foundation for everything that follows. We often call this 'embedding a word,' which invites you to think of these vectors very geometrically, as points in some high-dimensional space..."
+> "You should draw a very sharp distinction in your mind between the weights of the model — which I'll always color in blue or red — and the data being processed — which I'll always color in gray. The weights are the actual brains. They are the things learned during training and they determine how it behaves. [...] We often call this 'embedding a word,' which invites you to think of these vectors very geometrically, as points in some high-dimensional space..."
 >
 > — 3Blue1Brown, *Transformers Explained*
 
@@ -370,17 +366,23 @@ The training data for SFT has a specific structure. Special tokens delineate who
 
 ![](../slides/02_deep_dive/slide-38.png){.slide-image fig-align="center" width="85%"}
 
+New tokens are created to capture the structure of a conversation — marking who is speaking, when a turn begins and ends, and what role the model should play.
+
 ---
 
 ### SFT: The Apple Example
 
 ![](../slides/02_deep_dive/slide-39.png){.slide-image fig-align="center" width="85%"}
 
+Writing the "good" assistant answer requires genuine technical knowledge. The quality of the SFT dataset depends directly on the expertise of the human labellers who create these example conversations.
+
 ---
 
 ### SFT: Goal and Analogy
 
 ![](../slides/02_deep_dive/slide-40.png){.slide-image fig-align="center" width="85%"}
+
+The goal of SFT is to teach the base model to **imitate the assistant's responses** in these example conversations. If the assistant in the training data answers questions, follows instructions, and refuses harmful requests, the fine-tuned model will learn to do the same. Karpathy's analogy: pretraining is reading the textbook exposition; SFT is studying worked problems solved by experts. The fundamental training algorithm — next-token prediction — remains the same.
 
 With the base model now able to hold a conversation, the next question is: how is its behaviour shaped and constrained? The answer lies in a piece of hidden text that accompanies every interaction.
 
@@ -510,11 +512,15 @@ Tool use also enables complex tasks that would be impractical for text predictio
 
 ![](../slides/02_deep_dive/slide-54.png){.slide-image fig-align="center" width="85%"}
 
+Beyond web search, other tools commonly integrated with LLMs include: **Code Interpreter** for calculations, data analysis, and visualization; **Calculator** for precise arithmetic; **API calls** for interacting with external services (booking, weather, databases); and **Knowledge Base Retrieval (RAG)** for searching over private document collections. These tools are key to creating more capable, "agent-like" LLMs.
+
 ## The Jagged Frontier
 
 ### The "Jagged Frontier" of Capabilities
 
 ![](../slides/02_deep_dive/slide-55.png){.slide-image fig-align="center" width="85%"}
+
+The hallucination problem and the tool use solution both illustrate a broader pattern: LLM capabilities are not uniformly distributed. Some tasks that seem trivially easy for humans are hard for these models, while some tasks that seem hard can be straightforward. This uneven landscape of capability is what Karpathy calls the "Swiss Cheese model" — and it is why understanding the mechanism matters so much for knowing when to trust the output.
 
 ---
 
@@ -522,7 +528,7 @@ Tool use also enables complex tasks that would be impractical for text predictio
 
 ![](../slides/02_deep_dive/slide-56.png){.slide-image fig-align="center" width="85%"}
 
-The hallucination problem and the tool use solution both illustrate a broader pattern: LLM capabilities are not uniformly distributed. Some tasks that seem trivially easy for humans are hard for these models, while some tasks that seem hard can be straightforward. This uneven landscape of capability is what researchers call the **jagged frontier** — and it is why understanding the mechanism matters so much for knowing when to trust the output.
+Two concrete examples of this jagged frontier: **models cannot count reliably** without tools (counting requires precise arithmetic per token), and **models are not good with spelling** because they see tokens, not individual letters. The strawberry problem — counting Rs in "strawberry" — fails because the model never sees the individual characters. The fix is always the same: instruct the LLM to use its Code Interpreter. A simple Python script makes both tasks trivial.
 
 With the assistant model now equipped with tools and guardrails (however imperfect), there is one more training phase that pushes beyond human-level imitation entirely.
 
@@ -550,11 +556,9 @@ Karpathy's analogy captures the three training phases precisely. **Pretraining**
 
 The most dramatic demonstration of reinforcement learning's power is **AlphaGo**. Go is an ancient board game played on a 19x19 grid with more possible positions than atoms in the universe — brute-force computation is impossible.
 
-DeepMind's first approach was supervised finetuning: show the model millions of games played by top human players and train it to predict the next move. This worked — AlphaGo converged toward the skill level of **Lee Sedol**, the world champion. But it could never surpass him, because it was bounded by human examples. You cannot transcend the ceiling of your training data through imitation alone.
+DeepMind's first approach was supervised finetuning: show the model millions of games played by top human players. AlphaGo converged toward the skill level of **Lee Sedol**, the world champion — but it could never surpass him. You cannot transcend the ceiling of your training data through imitation alone.
 
-Then came reinforcement learning. Instead of showing human games, the system played against itself — millions of times. Go is a **verifiable domain**: you can always determine whether a game was won or lost. When the system won, the behaviour was reinforced; when it lost, alternative strategies were encouraged. No human examples. No human heuristics.
-
-The result was extraordinary. AlphaGo surpassed the best human players — exceeding thousands of years of accumulated human expertise in the game.
+Then came reinforcement learning. The system played against itself millions of times. Go is a **verifiable domain**: you can always determine whether a game was won or lost. No human examples, no human heuristics — and the result was extraordinary. AlphaGo surpassed the best human players.
 
 ---
 
@@ -562,7 +566,7 @@ The result was extraordinary. AlphaGo surpassed the best human players — excee
 
 ![](../slides/02_deep_dive/slide-60.png){.slide-image fig-align="center" width="85%"}
 
-The iconic moment came in AlphaGo's match against Lee Sedol: **Move 37**. Every expert watching — the best Go players in the world — thought it was a mistake. The move violated a deeply held heuristic: you do not play that high on the board at that stage of the game. AlphaGo's own evaluation estimated the probability that a human would play this move at one in 10,000.
+The iconic moment: **Move 37**. Every expert watching thought it was a mistake — the move violated a deeply held heuristic about playing too high on the board at that stage. AlphaGo estimated the probability that a human would play this move at one in 10,000.
 
 It turned out to be a brilliant, game-winning move — something no human would have discovered through conventional play. Lee Sedol himself later said: "I thought it was merely a machine, but when I saw Move 37, I thought it was creative."
 
@@ -608,11 +612,15 @@ The process works as follows. Take a set of prompts (say 1,000). Generate multip
 
 ![](../slides/02_deep_dive/slide-65.png){.slide-image fig-align="center" width="85%"}
 
+Human rankings train a reward model, which then guides the RL process at scale.
+
 ---
 
 ### RLHF Visualized (continued)
 
 ![](../slides/02_deep_dive/slide-66.png){.slide-image fig-align="center" width="85%"}
+
+The reward model learns to "simulate" human preferences. Instead of requiring astronomical human effort for direct RL scoring, a smaller (but still significant) amount of human effort trains the reward model. Once the reward model is trained, the RL process can be largely automated.
 
 ---
 
@@ -620,11 +628,15 @@ The process works as follows. Take a set of prompts (say 1,000). Generate multip
 
 ![](../slides/02_deep_dive/slide-67.png){.slide-image fig-align="center" width="85%"}
 
+RLHF enables optimization in subjective domains — helpfulness, harmlessness, writing style, humour — that are hard to define with explicit rules. Crucially, it exploits the **discriminator-generator gap**: it is often easier for humans to *judge* or *rank* alternatives than to *generate* a perfect example from scratch. RLHF leverages this easier human task (ranking) to guide the model toward better outputs.
+
 ---
 
 ### RLHF: Downsides and Challenges
 
 ![](../slides/02_deep_dive/slide-68.png){.slide-image fig-align="center" width="85%"}
+
+The main risk is **reward hacking**: the reward model is an imperfect proxy for true human preferences, and the LLM can become very good at finding loopholes — outputs that score highly with the reward model but are actually bad or nonsensical to humans. As Karpathy notes, "RLHF is not RL in the magical sense of AlphaGo — it is more like a fine-tuning that slightly improves your model." Additionally, collecting high-quality human preference data remains expensive and the reward model can inherit biases from the labellers.
 
 ---
 
@@ -649,6 +661,8 @@ These are core concepts for the course — and for the final evaluation. Underst
 ### Key Takeaways on LLM "Intelligence"
 
 ![](../slides/02_deep_dive/slide-71.png){.slide-image fig-align="center" width="85%"}
+
+At their core, LLMs are sophisticated **statistical pattern matchers**. Vast knowledge is encoded implicitly in their weights, but accessing it precisely can be unreliable — the context window acts as "working memory" for reliable recall. They do not "understand" or "feel" in a human sense. Their capabilities are impressive but **jagged**, with unexpected holes (hallucinations, character-level tasks) that **tool use** can overcome. Behaviour is shaped entirely by data and training objectives: SFT teaches imitation, RLHF aligns with preferences, and RL on verifiable tasks can lead to emergent reasoning.
 
 ---
 
