@@ -118,7 +118,7 @@ With that roadmap in hand, let us begin with the first stage: pretraining.
 
 ## Part I: Pretraining
 
-### Building Foundational Knowledge
+### Part I Pretraining: Building Foundational Knowledge
 
 ![](../slides/02_deep_dive/slide-11.png){.slide-image fig-align="center" width="85%"}
 
@@ -126,7 +126,7 @@ The goal of **pretraining** is to produce a base model — an internet document 
 
 ---
 
-### Sourcing the Internet
+### Pretraining: Building Foundational Knowledge
 
 ![](../slides/02_deep_dive/slide-12.png){.slide-image fig-align="center" width="85%"}
 
@@ -134,7 +134,7 @@ An important point about data curation: even simple filters at this stage can sh
 
 ---
 
-### Data Sources: Where Does It Come From?
+### Pretraining Step 1: The Data - Sourcing the Internet
 
 ![](../slides/02_deep_dive/slide-13.png){.slide-image fig-align="center" width="85%"}
 
@@ -142,7 +142,7 @@ One major data source is **Common Crawl**, a tool that systematically scrapes th
 
 ---
 
-### Data Sources: Where Does It Come From? (continued)
+### Data Sources: Where Does It Come From?
 
 ![](../slides/02_deep_dive/slide-14.png){.slide-image fig-align="center" width="85%"}
 
@@ -150,7 +150,7 @@ Training data composition is typically not disclosed by AI companies. The usual 
 
 ---
 
-### The FineWeb Cleaning Pipeline
+### Data Sources: Where Does It Come From?
 
 ![](../slides/02_deep_dive/slide-15.png){.slide-image fig-align="center" width="85%"}
 
@@ -158,7 +158,7 @@ Once raw data is collected, it goes through a cleaning pipeline. **FineWeb** is 
 
 ---
 
-### The Data Processing Pipeline
+### Pretraining Step 1: The Data - Sourcing the Internet
 
 ![](../slides/02_deep_dive/slide-16.png){.slide-image fig-align="center" width="85%"}
 
@@ -172,7 +172,7 @@ The pipeline involves several stages. **URL filtering** uses hard-coded blocklis
 
 ---
 
-### Scale and Nature of Pretraining Data
+### The Data Processing Pipeline: Refining the Raw Material
 
 ![](../slides/02_deep_dive/slide-17.png){.slide-image fig-align="center" width="85%"}
 
@@ -184,7 +184,7 @@ With 44 terabytes of cleaned text in hand, the next question is: how does this t
 
 ## Tokenization
 
-### Why Do We Need Tokenization?
+### Scale and Nature of Pretraining Data
 
 ![](../slides/02_deep_dive/slide-18.png){.slide-image fig-align="center" width="85%"}
 
@@ -192,7 +192,7 @@ The training text is a sequence of characters drawn from a finite set of about 2
 
 ---
 
-### From Characters to Bytes
+### Pretraining Step 2: Tokenization - Why Do We Need It?
 
 ![](../slides/02_deep_dive/slide-19.png){.slide-image fig-align="center" width="85%"}
 
@@ -200,7 +200,7 @@ The solution is **tokenization**: instead of working with individual characters,
 
 ---
 
-### Byte Pair Encoding (BPE)
+### Tokenization: From Characters to Bytes
 
 ![](../slides/02_deep_dive/slide-20.png){.slide-image fig-align="center" width="85%"}
 
@@ -208,7 +208,7 @@ The standard algorithm is **Byte Pair Encoding** (BPE). It works iteratively: sc
 
 ---
 
-### What Are Tokens?
+### The Solution: Subword Tokenization (e.g., Byte Pair Encoding - BPE)
 
 ![](../slides/02_deep_dive/slide-21.png){.slide-image fig-align="center" width="85%"}
 
@@ -216,7 +216,7 @@ Tokens are not words. They are frequently occurring character groups. Common wor
 
 ---
 
-### The Result: A Sequence of Token IDs
+### What are Tokens? - Concrete Examples
 
 ![](../slides/02_deep_dive/slide-22.png){.slide-image fig-align="center" width="85%"}
 
@@ -228,7 +228,7 @@ Now that the text has been converted into tokens, the neural network can begin i
 
 ## Neural Network Training
 
-### The Core Task: Predict the Next Token
+### The Result of Tokenization: A Sequence of Token IDs
 
 ![](../slides/02_deep_dive/slide-23.png){.slide-image fig-align="center" width="85%"}
 
@@ -236,7 +236,7 @@ With tokenized text in hand, the core training task is simple to describe: given
 
 ---
 
-### Learning from Errors
+### Pretraining Step 3: Neural Network Training - The Core Task
 
 ![](../slides/02_deep_dive/slide-24.png){.slide-image fig-align="center" width="85%"}
 
@@ -244,7 +244,7 @@ Initially, these probabilities are random — the model guesses blindly. Trainin
 
 ---
 
-### Neural Network I/O
+### Pretraining Step 3: Neural Network Training - The Core Task
 
 ![](../slides/02_deep_dive/slide-25.png){.slide-image fig-align="center" width="85%"}
 
@@ -252,7 +252,7 @@ This process — present tokens, predict the next one, compare to the true answe
 
 ---
 
-### The Training Loop
+### Neural Network I/O: What Goes In, What Comes Out?
 
 ![](../slides/02_deep_dive/slide-26.png){.slide-image fig-align="center" width="85%"}
 
@@ -260,7 +260,7 @@ The training loop is always the same: feed a sequence, predict the next token, c
 
 ---
 
-### Inside the Neural Network: Transformers and Attention
+### The Training Process: Learning from Data
 
 ![](../slides/02_deep_dive/slide-27.png){.slide-image fig-align="center" width="85%"}
 
@@ -268,7 +268,7 @@ The mathematical details of how weights are updated — **backpropagation** and 
 
 ---
 
-### Embeddings: Meaning as Geometry
+### A Glimpse Inside: Neural Network Internals (High Level)
 
 ![](../slides/02_deep_dive/slide-28.png){.slide-image fig-align="center" width="85%"}
 
@@ -280,7 +280,7 @@ This is implemented through **vector embeddings**. Each token is represented as 
 
 ---
 
-### The Attention Mechanism
+### A Glimpse Inside: Neural Network Internals (High Level)
 
 ![](../slides/02_deep_dive/slide-29.png){.slide-image fig-align="center" width="85%"}
 
@@ -294,7 +294,7 @@ The embedding captures meaning in space; the attention mechanism uses that spati
 
 ## Computational Cost and the Base Model
 
-### Computational Cost of Pretraining
+### A Glimpse Inside: Neural Network Internals (High Level)
 
 ![](../slides/02_deep_dive/slide-30.png){.slide-image fig-align="center" width="85%"}
 
@@ -302,7 +302,7 @@ All of this requires enormous computational power. The **GPUs** — graphical pr
 
 ---
 
-### The Pace of Cost Reduction
+### Computational Cost of Pretraining
 
 ![](../slides/02_deep_dive/slide-31.png){.slide-image fig-align="center" width="85%"}
 
@@ -310,7 +310,7 @@ The pace of cost reduction is striking. Reproducing **GPT-2** (1.5 billion param
 
 ---
 
-### Inference: Generating New Text
+### Computational Cost of Pretraining
 
 ![](../slides/02_deep_dive/slide-32.png){.slide-image fig-align="center" width="85%"}
 
@@ -322,13 +322,13 @@ Karpathy demonstrates this in the video: he feeds the opening of a Wikipedia art
 
 ---
 
-### Inference Visualized
+### Pretraining Step 4: Inference - Generating New Text
 
 ![](../slides/02_deep_dive/slide-33.png){.slide-image fig-align="center" width="85%"}
 
 ---
 
-### The Result of Pretraining: The "Base Model"
+### Inference: Visualized
 
 ![](../slides/02_deep_dive/slide-34.png){.slide-image fig-align="center" width="85%"}
 
@@ -336,7 +336,7 @@ This concludes the pretraining phase. The result is a base model that can genera
 
 ## Part II: Post-Training
 
-### Supervised Finetuning
+### The Result of Pretraining: The "Base Model"
 
 ![](../slides/02_deep_dive/slide-35.png){.slide-image fig-align="center" width="85%"}
 
@@ -344,7 +344,7 @@ The challenge is to transform "glorified text completion" into a helpful assista
 
 ---
 
-### Introduction to Post-Training
+### Post-Training: Creating an Assistant
 
 ![](../slides/02_deep_dive/slide-36.png){.slide-image fig-align="center" width="85%"}
 
@@ -354,7 +354,7 @@ The goal is specific: given a user question like "what is 2 plus 2," the model s
 
 ---
 
-### The SFT Data Structure
+### Moving Beyond the Base Model: From "Internet Simulator" to "Helpful Assistant"
 
 ![](../slides/02_deep_dive/slide-37.png){.slide-image fig-align="center" width="85%"}
 
@@ -362,7 +362,7 @@ The training data for SFT has a specific structure. Special tokens delineate who
 
 ---
 
-### SFT: Continued
+### Introduction to Post-Training
 
 ![](../slides/02_deep_dive/slide-38.png){.slide-image fig-align="center" width="85%"}
 
@@ -370,7 +370,7 @@ New tokens are created to capture the structure of a conversation — marking wh
 
 ---
 
-### SFT: The Apple Example
+### Supervised Finetuning (SFT): The Core Idea
 
 ![](../slides/02_deep_dive/slide-39.png){.slide-image fig-align="center" width="85%"}
 
@@ -378,7 +378,7 @@ Writing the "good" assistant answer requires genuine technical knowledge. The qu
 
 ---
 
-### SFT: Goal and Analogy
+### Supervised Finetuning (SFT): The Core Idea
 
 ![](../slides/02_deep_dive/slide-40.png){.slide-image fig-align="center" width="85%"}
 
@@ -388,7 +388,7 @@ With the base model now able to hold a conversation, the next question is: how i
 
 ## System Prompts and LLM "Psychology"
 
-### The System Prompt
+### Supervised Finetuning (SFT): The Core Idea
 
 ![](../slides/02_deep_dive/slide-41.png){.slide-image fig-align="center" width="85%"}
 
@@ -400,7 +400,7 @@ For Claude, the system prompt is publicly available — you can read it online f
 
 ---
 
-### How System Prompts Work
+### Supervised Finetuning (SFT): The Core Idea
 
 ![](../slides/02_deep_dive/slide-42.png){.slide-image fig-align="center" width="85%"}
 
@@ -408,7 +408,7 @@ Reading Claude's system prompt is assigned as homework. It is a revealing docume
 
 ---
 
-### Common Content of System Prompts
+### Guiding LLM Behavior: The System Prompt
 
 ![](../slides/02_deep_dive/slide-43.png){.slide-image fig-align="center" width="85%"}
 
@@ -418,7 +418,7 @@ A typical system prompt includes: the **persona** ("you are a helpful assistant"
 
 Understanding how system prompts work also reveals a fundamental vulnerability: if the model follows natural language instructions, it can be tricked with natural language too.
 
-### The Prompt Injection Problem
+### How System Prompts Work
 
 ![](../slides/02_deep_dive/slide-44.png){.slide-image fig-align="center" width="85%"}
 
@@ -426,7 +426,7 @@ Because LLMs process natural language instructions, they are vulnerable to **pro
 
 ---
 
-### Prompt Injection: Real-World Incident
+### Common Content of System Prompts
 
 ![](../slides/02_deep_dive/slide-45.png){.slide-image fig-align="center" width="85%"}
 
@@ -434,7 +434,7 @@ A viral example: someone chatting with a car dealership's customer service chatb
 
 ---
 
-### The Tennessee Williams Trick
+### LLM "Psychology": The Prompt Injection Problem
 
 ![](../slides/02_deep_dive/slide-46.png){.slide-image fig-align="center" width="85%"}
 
@@ -444,7 +444,7 @@ This is remarkably difficult to defend against. Researchers at EPFL and elsewher
 
 ---
 
-### Direct vs. Indirect Injection
+### Prompt Injection: Real-World Incident That Made Headline
 
 ![](../slides/02_deep_dive/slide-47.png){.slide-image fig-align="center" width="85%"}
 
@@ -454,7 +454,7 @@ The implications are widespread. Students have embedded white text in assignment
 
 ---
 
-### Try It Yourself: The Gandalf Challenge
+### Prompt Injection: The Tennessee Williams Trick
 
 ![](../slides/02_deep_dive/slide-48.png){.slide-image fig-align="center" width="85%"}
 
@@ -464,7 +464,7 @@ Prompt injection exploits the model's willingness to follow instructions. But th
 
 ## Hallucinations and Tool Use
 
-### The Problem of Hallucinations
+### Prompt Injection: Direct vs. Indirect
 
 ![](../slides/02_deep_dive/slide-49.png){.slide-image fig-align="center" width="85%"}
 
@@ -472,7 +472,7 @@ Prompt injection exploits the model's willingness to follow instructions. But th
 
 ---
 
-### Why Do SFT Models Hallucinate?
+### Try It Yourself: The Gandalf Challenge
 
 ![](../slides/02_deep_dive/slide-50.png){.slide-image fig-align="center" width="85%"}
 
@@ -482,7 +482,7 @@ The supervised finetuning phase makes this worse. The conversation examples used
 
 ---
 
-### Mitigation Strategy 1: Teaching "I Don't Know"
+### LLM "Psychology": The Problem of Hallucinations
 
 ![](../slides/02_deep_dive/slide-51.png){.slide-image fig-align="center" width="85%"}
 
@@ -490,7 +490,7 @@ Several strategies help reduce hallucinations. One approach: **self-consistency 
 
 ---
 
-### Mitigation Strategy 2: Tool Use
+### Why Do SFT Models Hallucinate?
 
 ![](../slides/02_deep_dive/slide-52.png){.slide-image fig-align="center" width="85%"}
 
@@ -500,7 +500,7 @@ The same applies to the strawberry problem: asking the model to count Rs in text
 
 ---
 
-### Teaching Tool Use Through SFT
+### Mitigating Hallucinations: Strategy #1 - Teaching "I Don't Know"
 
 ![](../slides/02_deep_dive/slide-53.png){.slide-image fig-align="center" width="85%"}
 
@@ -508,7 +508,7 @@ Tool use also enables complex tasks that would be impractical for text predictio
 
 ---
 
-### Other Common Tools for LLMs
+### Mitigating Hallucinations: Strategy #2 - Allowing Tool Use
 
 ![](../slides/02_deep_dive/slide-54.png){.slide-image fig-align="center" width="85%"}
 
@@ -516,7 +516,7 @@ Beyond web search, other tools commonly integrated with LLMs include: **Code Int
 
 ## The Jagged Frontier
 
-### The "Jagged Frontier" of Capabilities
+### Teaching Tool Use: SFT with Tool Call Examples
 
 ![](../slides/02_deep_dive/slide-55.png){.slide-image fig-align="center" width="85%"}
 
@@ -524,7 +524,7 @@ The hallucination problem and the tool use solution both illustrate a broader pa
 
 ---
 
-### Counting and Spelling Difficulties
+### Other Common Tools for LLMs
 
 ![](../slides/02_deep_dive/slide-56.png){.slide-image fig-align="center" width="85%"}
 
@@ -534,7 +534,7 @@ With the assistant model now equipped with tools and guardrails (however imperfe
 
 ## Part III: Reinforcement Learning
 
-### Beyond Imitation
+### LLM Quirks: The "Jagged Frontier" of Capabilities
 
 ![](../slides/02_deep_dive/slide-57.png){.slide-image fig-align="center" width="85%"}
 
@@ -544,13 +544,13 @@ Karpathy's analogy captures the three training phases precisely. **Pretraining**
 
 ---
 
-### The Three Phases Visualized
+### Quirks: Counting & Spelling Difficulties
 
 ![](../slides/02_deep_dive/slide-58.png){.slide-image fig-align="center" width="85%"}
 
 ---
 
-### AlphaGo and Move 37
+### Post-Training: Reinforcement Learning (RL)
 
 ![](../slides/02_deep_dive/slide-59.png){.slide-image fig-align="center" width="85%"}
 
@@ -562,7 +562,7 @@ Then came reinforcement learning. The system played against itself millions of t
 
 ---
 
-### Surpassing Human Imitation
+### Beyond Imitation: The Need for Reinforcement Learning (RL)
 
 ![](../slides/02_deep_dive/slide-60.png){.slide-image fig-align="center" width="85%"}
 
@@ -574,7 +574,7 @@ It turned out to be a brilliant, game-winning move — something no human would 
 
 ---
 
-### RL in Verifiable Domains
+### Beyond Imitation: The Need for Reinforcement Learning (RL)
 
 ![](../slides/02_deep_dive/slide-61.png){.slide-image fig-align="center" width="85%"}
 
@@ -582,7 +582,7 @@ The principle is general: in any domain where you can verify whether an answer i
 
 ---
 
-### RL in Verifiable Domains: Visualized
+### Beyond Imitation: The Need for Reinforcement Learning (RL)
 
 ![](../slides/02_deep_dive/slide-62.png){.slide-image fig-align="center" width="85%"}
 
@@ -590,7 +590,7 @@ But what about domains where there is no objectively correct answer? Most of wha
 
 ## RLHF: Learning from Human Preferences
 
-### The Challenge of Unverifiable Domains
+### RL and AlphaGo: Surpassing Human Imitation
 
 ![](../slides/02_deep_dive/slide-63.png){.slide-image fig-align="center" width="85%"}
 
@@ -600,7 +600,7 @@ The insight: while humans struggle to *produce* optimal outputs from scratch, we
 
 ---
 
-### The RLHF Process
+### RL in Verifiable Domains: The Core Idea
 
 ![](../slides/02_deep_dive/slide-64.png){.slide-image fig-align="center" width="85%"}
 
@@ -608,7 +608,7 @@ The process works as follows. Take a set of prompts (say 1,000). Generate multip
 
 ---
 
-### RLHF Visualized
+### RL in Verifiable Domains: Visualized
 
 ![](../slides/02_deep_dive/slide-65.png){.slide-image fig-align="center" width="85%"}
 
@@ -616,7 +616,7 @@ Human rankings train a reward model, which then guides the RL process at scale.
 
 ---
 
-### RLHF Visualized (continued)
+### The Challenge: RL in Unverifiable Domains
 
 ![](../slides/02_deep_dive/slide-66.png){.slide-image fig-align="center" width="85%"}
 
@@ -624,7 +624,7 @@ The reward model learns to "simulate" human preferences. Instead of requiring as
 
 ---
 
-### RLHF: Upsides
+### RLHF: The Core Process (Simplified)
 
 ![](../slides/02_deep_dive/slide-67.png){.slide-image fig-align="center" width="85%"}
 
@@ -632,7 +632,7 @@ RLHF enables optimization in subjective domains — helpfulness, harmlessness, w
 
 ---
 
-### RLHF: Downsides and Challenges
+### RLHF Visualized: Learning from Preferences
 
 ![](../slides/02_deep_dive/slide-68.png){.slide-image fig-align="center" width="85%"}
 
@@ -640,7 +640,7 @@ The main risk is **reward hacking**: the reward model is an imperfect proxy for 
 
 ---
 
-### The Human Cost of RLHF
+### RLHF Visualized: Learning from Preferences
 
 ![](../slides/02_deep_dive/slide-69.png){.slide-image fig-align="center" width="85%"}
 
@@ -648,7 +648,7 @@ The human cost of RLHF is not abstract. A TIME investigation revealed that worke
 
 ## Summary and Looking Ahead
 
-### The LLM Training Pipeline: A Recap
+### RLHF: Upsides
 
 ![](../slides/02_deep_dive/slide-70.png){.slide-image fig-align="center" width="85%"}
 
@@ -658,7 +658,7 @@ These are core concepts for the course — and for the final evaluation. Underst
 
 ---
 
-### Key Takeaways on LLM "Intelligence"
+### RLHF: Downsides and Challenges
 
 ![](../slides/02_deep_dive/slide-71.png){.slide-image fig-align="center" width="85%"}
 
@@ -666,7 +666,7 @@ At their core, LLMs are sophisticated **statistical pattern matchers**. Vast kno
 
 ---
 
-### Other Big Questions
+### RLHF: Downsides and Challenges
 
 ![](../slides/02_deep_dive/slide-72.png){.slide-image fig-align="center" width="85%"}
 
@@ -676,7 +676,7 @@ The instructor's own stance: not aligned with either extreme, but genuinely inte
 
 ---
 
-### Next Week
+### Summary & The LLM Pipeline
 
 ![](../slides/02_deep_dive/slide-73.png){.slide-image fig-align="center" width="85%"}
 
@@ -696,26 +696,24 @@ Starting next session, the format shifts to roughly 45 minutes of lecture follow
 
 ---
 
-## Appendix
-
-### Appendix Slide 1
+### The LLM Training Pipeline: A Recap
 
 ![](../slides/02_deep_dive/slide-74.png){.slide-image fig-align="center" width="85%"}
 
 ---
 
-### Appendix Slide 2
+### Key Takeaways on LLM "Intelligence"
 
 ![](../slides/02_deep_dive/slide-75.png){.slide-image fig-align="center" width="85%"}
 
 ---
 
-### Appendix Slide 3
+### Other Big Questions
 
 ![](../slides/02_deep_dive/slide-76.png){.slide-image fig-align="center" width="85%"}
 
 ---
 
-### Appendix Slide 4
+### Next week?
 
 ![](../slides/02_deep_dive/slide-77.png){.slide-image fig-align="center" width="85%"}
