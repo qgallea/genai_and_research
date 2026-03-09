@@ -120,11 +120,11 @@ This creativity emerged from a combination of learning from human expert games a
 
 ![](../slides/03_everyday_life/slide-10.png){.slide-image fig-align="center" width="85%"}
 
-A study from the **University of Montana** (Guzik et al., 2023) tested creativity more directly. Participants completed the **Torrance Tests of Creative Thinking (TTCT)**, a standardized battery of creative thinking tasks, and blind human judges rated the creativity of each output. The results: text produced entirely by ChatGPT scored significantly higher on creativity than text written by humans alone.
+A large-scale study from the **University of Lausanne** (Bohren, Hakimov, and Lalive, 2024) tested creativity more directly. Over 1,000 humans and two AI chatbots were asked to write a short text describing a town, city, or society of the future. More than 3,000 blind human judges then rated each output on novelty, surprise, and usefulness. The results: text produced entirely by ChatGPT scored significantly higher on creativity than text written by humans alone.
 
-Interestingly, the **human-plus-AI** condition did not reach the same creativity level as full AI output --- at least in this experiment.
+Interestingly, the **human-plus-AI** condition did not reach the same creativity level as full AI output --- the authors conjecture that prompting drives this result, since they directly asked ChatGPT to produce creative and novel answers.
 
-An important caveat: the participants were **college students**, not professional writers or trained creatives. The finding tells us that for non-experts doing creative tasks, AI can outperform --- but it says less about whether AI would beat top human creatives.
+An important caveat: the participants were a **representative sample of US adults**, not professional writers or trained creatives. The finding tells us that for non-experts doing creative tasks, AI can outperform --- but it says less about whether AI would beat top human creatives.
 
 > **Key insight**: AI can be more creative than average humans on standardized creative tasks --- but the sample matters enormously when interpreting these results.
 
