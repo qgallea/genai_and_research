@@ -10,8 +10,6 @@ This session tackles the practical foundations of working with GenAI tools in 20
 
 ## Introduction and Course Context
 
-### Slide 1: GenAI & Research --- 03. General Use
-
 ![](../slides/03_everyday_life/slide-01.png){.slide-image fig-align="center" width="85%"}
 
 Welcome to session three. Before diving in, let's debrief on the two videos from last week --- two deliberately extreme perspectives. **Sébastien Bubeck** argues that sparks of AGI were already visible in early models. **Roman Yampolskiy** takes a much more cautious, risk-focused view. Both are worth engaging with, even if you disagree, because understanding the strongest version of an argument you reject sharpens your own thinking.
@@ -28,7 +26,7 @@ For this course, we will use **Claude** as our primary tool. The university is c
 
 ---
 
-### Slide 2: THIS IS NOT 2024
+### This Is Not 2024
 
 ![](../slides/03_everyday_life/slide-02.png){.slide-image fig-align="center" width="85%"}
 
@@ -38,7 +36,7 @@ Most GenAI trainings in 2024 focused almost entirely on **prompting techniques**
 
 ---
 
-### Slide 3: ROADMAP
+### Session Roadmap
 
 ![](../slides/03_everyday_life/slide-03.png){.slide-image fig-align="center" width="85%"}
 
@@ -50,13 +48,11 @@ This session covers three areas. First, we go **beyond common myths** about LLMs
 
 With the course context set, we turn to the first challenge: dismantling the myths that still prevent people from using GenAI tools effectively.
 
-### Slide 4: PART I: BEYOND THE MYTHS
-
 ![](../slides/03_everyday_life/slide-04.png){.slide-image fig-align="center" width="85%"}
 
 ---
 
-### Slide 5: ROADMAP: PART I
+### Three Persistent Myths
 
 ![](../slides/03_everyday_life/slide-05.png){.slide-image fig-align="center" width="85%"}
 
@@ -66,7 +62,7 @@ When this course material was first developed for industry trainings --- legal d
 
 ## Myth 1: LLMs Are Dumb
 
-### Slide 6: LLMS ARE DUMB / USELESS
+### The Arithmetic Example
 
 ![](../slides/03_everyday_life/slide-06.png){.slide-image fig-align="center" width="85%"}
 
@@ -82,7 +78,7 @@ A **reasoning model** works differently. It thinks through intermediate steps *b
 
 ---
 
-### Slide 7: LLMS ARE DUMB
+### Benchmark Performance
 
 ![](../slides/03_everyday_life/slide-07.png){.slide-image fig-align="center" width="85%"}
 
@@ -94,7 +90,7 @@ These were GPT-4 results; newer models have improved significantly. But we shoul
 
 ---
 
-### Slide 8: CHATGPT: USELESS?
+### Real-World Evidence
 
 ![](../slides/03_everyday_life/slide-08.png){.slide-image fig-align="center" width="85%"}
 
@@ -110,7 +106,7 @@ For comparing models against each other, platforms like **LM Arena** (arena.ai) 
 
 ## Myth 2: LLMs Cannot Be Creative
 
-### Slide 9: GENAI AND CREATIVITY
+### AlphaGo's Move 37
 
 ![](../slides/03_everyday_life/slide-09.png){.slide-image fig-align="center" width="85%"}
 
@@ -120,7 +116,7 @@ This creativity emerged from a combination of learning from human expert games a
 
 ---
 
-### Slide 10: GENAI AND CREATIVITY
+### The Montana Creativity Study
 
 ![](../slides/03_everyday_life/slide-10.png){.slide-image fig-align="center" width="85%"}
 
@@ -138,13 +134,11 @@ An important caveat: the participants were **college students**, not professiona
 
 The evidence so far paints a positive picture: LLMs are capable, broad, and even creative. But every honest assessment must confront the failure modes. The third myth is not that LLMs make mistakes --- they do --- but that mistakes make them useless.
 
-### Slide 11: BUT LLMS MAKES MISTAKES
-
 ![](../slides/03_everyday_life/slide-11.png){.slide-image fig-align="center" width="85%"}
 
 ---
 
-### Slide 12: LLMS MAKES MISTAKES!
+### Humans Make Mistakes Too
 
 ![](../slides/03_everyday_life/slide-12.png){.slide-image fig-align="center" width="85%"}
 
@@ -162,7 +156,7 @@ The right framing is not "LLMs make mistakes, therefore they are useless" but ra
 
 ### Solution 1: Know Enough to Judge
 
-### Slide 13: LLMS MAKES MISTAKES! SOLUTION 1: YOU KNOW THE ANSWER
+### Know Enough to Judge the Output
 
 ![](../slides/03_everyday_life/slide-13.png){.slide-image fig-align="center" width="85%"}
 
@@ -174,7 +168,7 @@ But when ground truth matters, **you need enough expertise to judge the output**
 
 ---
 
-### Slide 14: Viral Tweet on Legal Work
+### The Viral Legal Work Tweet
 
 ![](../slides/03_everyday_life/slide-14.png){.slide-image fig-align="center" width="85%"}
 
@@ -194,7 +188,7 @@ One business automated their entire coding pipeline and was generating hundreds 
 
 ### Solution 2: Ask for Sources
 
-### Slide 15: LLMS MAKES MISTAKES! SOLUTION 2: ASK FOR SOURCE
+### Verification in Practice
 
 ![](../slides/03_everyday_life/slide-15.png){.slide-image fig-align="center" width="85%"}
 
@@ -212,7 +206,7 @@ This matters because the most dangerous AI errors are not bugs --- they are **co
 
 ### Solution 3: Provide the Source Material
 
-### Slide 16: LLMS MAKES MISTAKES! SOLUTION 3: PROVIDE THE SOURCE
+### Source-Grounded Tools
 
 ![](../slides/03_everyday_life/slide-16.png){.slide-image fig-align="center" width="85%"}
 
@@ -228,13 +222,11 @@ With the myths addressed and a toolkit of solutions for handling mistakes, we no
 
 ## Prompt Engineering and Effective Use
 
-### Slide 17: LLMS OUTPUT IS DULL/GENERIC
-
 ![](../slides/03_everyday_life/slide-17.png){.slide-image fig-align="center" width="85%"}
 
 ---
 
-### Slide 18: PROMPT ENGINEERING 101
+### Detecting AI-Generated Text
 
 ![](../slides/03_everyday_life/slide-18.png){.slide-image fig-align="center" width="85%"}
 
@@ -258,7 +250,7 @@ The bottom line on "dull output": usually, the problem is not the tool --- it is
 
 ### The Three Elements of a Good Prompt
 
-### Slide 19: PROMPT ENGINEERING 101
+### Context, Task, and Rules
 
 ![](../slides/03_everyday_life/slide-19.png){.slide-image fig-align="center" width="85%"}
 
@@ -274,7 +266,7 @@ This can be summarized simply: **be a good manager**. Explain the task clearly, 
 
 ---
 
-### Slide 20: EXAMPLE
+### A Concrete Prompting Example
 
 ![](../slides/03_everyday_life/slide-20.png){.slide-image fig-align="center" width="85%"}
 
@@ -286,7 +278,7 @@ Here is a concrete example. **Context**: "I am a master's student in economics w
 
 ---
 
-### Slide 21: MORE CONTEXT
+### File Uploads and Limits
 
 ![](../slides/03_everyday_life/slide-21.png){.slide-image fig-align="center" width="85%"}
 
@@ -296,7 +288,7 @@ Practical limits to keep in mind: **32 MB per file** and a **maximum of 20 files
 
 ---
 
-### Slide 22: ITERATE
+### Iterate with Specific Feedback
 
 ![](../slides/03_everyday_life/slide-22.png){.slide-image fig-align="center" width="85%"}
 
@@ -312,7 +304,7 @@ The most important iteration rule: **be specific with feedback**. "Make it short
 
 Now that we have covered the fundamentals of effective prompting, we move to the features that make GenAI tools truly powerful for sustained work: personalization and projects.
 
-### Slide 23: PERSONALIZATION
+### Persistent Personalization
 
 ![](../slides/03_everyday_life/slide-23.png){.slide-image fig-align="center" width="85%"}
 
@@ -322,7 +314,7 @@ This is a personal choice. Some people prefer a blank slate each time; others (l
 
 ---
 
-### Slide 24: PROJECTS
+### What Are Projects?
 
 ![](../slides/03_everyday_life/slide-24.png){.slide-image fig-align="center" width="85%"}
 
@@ -334,7 +326,7 @@ Projects are what you will use for the **midterm assignment**: you will create a
 
 ---
 
-### Slide 25: PROJECTS
+### Causal Detectives in Action
 
 ![](../slides/03_everyday_life/slide-25.png){.slide-image fig-align="center" width="85%"}
 
@@ -346,7 +338,7 @@ The project automatically analyzes any claim against concepts from the book, rat
 
 ---
 
-### Slide 26: PROJECTS
+### Connectors and RAG
 
 ![](../slides/03_everyday_life/slide-26.png){.slide-image fig-align="center" width="85%"}
 
@@ -360,7 +352,7 @@ Two practical tips. First, the "describe your project" field on the project crea
 
 ---
 
-### Slide 27: PROJECTS: EXAMPLE
+### Master's Thesis Project
 
 ![](../slides/03_everyday_life/slide-27.png){.slide-image fig-align="center" width="85%"}
 
@@ -372,7 +364,7 @@ A natural use case: a **master's thesis project**. Upload your key papers, your 
 
 Projects give you a persistent workspace, but Claude's capabilities extend further through artifacts, skills, and connectors --- features that turn it from a conversational tool into a platform.
 
-### Slide 28: ARTIFACTS
+### Artifacts
 
 ![](../slides/03_everyday_life/slide-28.png){.slide-image fig-align="center" width="85%"}
 
@@ -384,7 +376,7 @@ A note on the relationship between projects, Code, and Claude's interface: **Cla
 
 ---
 
-### Slide 29: SKILLS
+### Skills
 
 ![](../slides/03_everyday_life/slide-29.png){.slide-image fig-align="center" width="85%"}
 
@@ -392,13 +384,11 @@ A note on the relationship between projects, Code, and Claude's interface: **Cla
 
 ---
 
-### Slide 30: SKILLS
-
 ![](../slides/03_everyday_life/slide-30.png){.slide-image fig-align="center" width="85%"}
 
 ---
 
-### Slide 31: CONNECTORS
+### Connectors
 
 ![](../slides/03_everyday_life/slide-31.png){.slide-image fig-align="center" width="85%"}
 
@@ -406,7 +396,7 @@ A note on the relationship between projects, Code, and Claude's interface: **Cla
 
 ---
 
-### Slide 32: CONNECTORS
+### Claude Cowork on Desktop
 
 ![](../slides/03_everyday_life/slide-32.png){.slide-image fig-align="center" width="85%"}
 
@@ -414,13 +404,11 @@ With **Claude Cowork** on your desktop, the capabilities become remarkable. You 
 
 ---
 
-### Slide 33: CLAUDE COWORK + CODE
-
 ![](../slides/03_everyday_life/slide-33.png){.slide-image fig-align="center" width="85%"}
 
 ---
 
-### Slide 34: Working in 2026
+### Working in 2026
 
 ![](../slides/03_everyday_life/slide-34.png){.slide-image fig-align="center" width="85%"}
 
@@ -436,15 +424,13 @@ Whether this is exciting or unsettling is worth reflecting on. It is shared here
 
 We have seen what GenAI can do. Now we confront what can go wrong --- not to discourage use, but to use these tools with eyes open.
 
-### Slide 35: PART II: LIMITATIONS AND RISKS
-
 ![](../slides/03_everyday_life/slide-35.png){.slide-image fig-align="center" width="85%"}
 
 ---
 
 ### The Risk to Learning
 
-### Slide 36: Learning
+### AI as Tutor, Not Shortcut
 
 ![](../slides/03_everyday_life/slide-36.png){.slide-image fig-align="center" width="85%"}
 
@@ -454,7 +440,7 @@ The first risk is to **learning itself**. An MIT professor specializing in pedag
 
 ---
 
-### Slide 37: Learning --- Process vs. Output
+### Process vs. Output
 
 ![](../slides/03_everyday_life/slide-37.png){.slide-image fig-align="center" width="85%"}
 
@@ -468,7 +454,7 @@ Once you have acquired expertise, some tasks shift to being output-focused. A se
 
 ### Thought Diversity Under Threat
 
-### Slide 38: Thought Diversity
+### The Convergence Problem
 
 ![](../slides/03_everyday_life/slide-38.png){.slide-image fig-align="center" width="85%"}
 
@@ -482,7 +468,7 @@ Breakthroughs require diverse thinking. Research shows that professionals from d
 
 ### Privacy Concerns
 
-### Slide 39: Privacy
+### Data and Privacy Risks
 
 ![](../slides/03_everyday_life/slide-39.png){.slide-image fig-align="center" width="85%"}
 
@@ -490,7 +476,7 @@ Breakthroughs require diverse thinking. Research shows that professionals from d
 
 ---
 
-### Slide 40: PRIVACY
+### What the Model Knows About You
 
 ![](../slides/03_everyday_life/slide-40.png){.slide-image fig-align="center" width="85%"}
 
@@ -498,7 +484,7 @@ A lighter illustration of how much these models know about you: ask Claude or Ch
 
 ---
 
-### Slide 41: PRIVACY
+### How Accurate Is the Reconstruction?
 
 ![](../slides/03_everyday_life/slide-41.png){.slide-image fig-align="center" width="85%"}
 
@@ -508,7 +494,7 @@ In a follow-up attempt, the generated image matched details like the go board in
 
 ### Bias and Detection
 
-### Slide 42: W.E.I.R.D. BIAS
+### W.E.I.R.D. Bias
 
 ![](../slides/03_everyday_life/slide-42.png){.slide-image fig-align="center" width="85%"}
 
@@ -518,7 +504,7 @@ LLMs exhibit **W.E.I.R.D. bias** --- they over-represent the worldview of Wester
 
 ---
 
-### Slide 43: BE CAREFUL WITH COPY PASTING
+### AI Detection Tools
 
 ![](../slides/03_everyday_life/slide-43.png){.slide-image fig-align="center" width="85%"}
 
@@ -530,7 +516,7 @@ Beyond detection risk, copy-pasting AI output directly reduces your **learning o
 
 ---
 
-### Slide 44: BE CAREFUL WITH COPY PASTING
+### A Real LinkedIn Example
 
 ![](../slides/03_everyday_life/slide-44.png){.slide-image fig-align="center" width="85%"}
 
@@ -544,7 +530,7 @@ At 99% probability, it is not just "AI-polished." It is straight copy-paste. And
 
 ### Over-Reliance and the Jagged Frontier
 
-### Slide 45: FALLING ASLEEP AT THE WHEEL
+### Falling Asleep at the Wheel
 
 ![](../slides/03_everyday_life/slide-45.png){.slide-image fig-align="center" width="85%"}
 
@@ -552,7 +538,7 @@ Research shows that **over-reliance on AI degrades human performance over time**
 
 ---
 
-### Slide 46: Jagged Frontier
+### The Jagged Frontier
 
 ![](../slides/03_everyday_life/slide-46.png){.slide-image fig-align="center" width="85%"}
 
@@ -566,13 +552,11 @@ The limitations are real, but they are not reasons to avoid GenAI --- they are r
 
 ## Part III: Responsible and Safe Use
 
-### Slide 47: PART III: RESPONSIBLE AND SAFE USE
-
 ![](../slides/03_everyday_life/slide-47.png){.slide-image fig-align="center" width="85%"}
 
 ---
 
-### Slide 48: RESPONSIBLE AND SAFE USE
+### Rules 1 and 2: Weigh Costs and Do It Well
 
 ![](../slides/03_everyday_life/slide-48.png){.slide-image fig-align="center" width="85%"}
 
@@ -586,7 +570,7 @@ Two ground rules for the rest of this course and beyond.
 
 ---
 
-### Slide 49: RESPONSIBLE AND SAFE USE
+### Rule 3: Never Copy-Paste Directly
 
 ![](../slides/03_everyday_life/slide-49.png){.slide-image fig-align="center" width="85%"}
 
@@ -594,7 +578,7 @@ Two ground rules for the rest of this course and beyond.
 
 ---
 
-### Slide 50: RESPONSIBLE AND SAFE USE
+### Rule 4: Choose Your Tasks Carefully
 
 ![](../slides/03_everyday_life/slide-50.png){.slide-image fig-align="center" width="85%"}
 
@@ -606,7 +590,7 @@ Two ground rules for the rest of this course and beyond.
 
 ## For Next Week
 
-### Slide 51: FOR NEXT WEEK
+### Homework
 
 ![](../slides/03_everyday_life/slide-51.png){.slide-image fig-align="center" width="85%"}
 
