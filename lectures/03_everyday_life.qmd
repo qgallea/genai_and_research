@@ -64,7 +64,7 @@ When this course material was first developed for industry trainings --- legal d
 
 ---
 
-### Myth 1: LLMs Are Dumb
+## Myth 1: LLMs Are Dumb
 
 ### Slide 6: LLMS ARE DUMB / USELESS
 
@@ -108,7 +108,7 @@ For comparing models against each other, platforms like **LM Arena** (arena.ai) 
 
 ---
 
-### Myth 2: LLMs Cannot Be Creative
+## Myth 2: LLMs Cannot Be Creative
 
 ### Slide 9: GENAI AND CREATIVITY
 
