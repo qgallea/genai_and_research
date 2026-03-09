@@ -31,8 +31,8 @@ The goal is not just to *use* these tools, but to use them **responsibly and rig
 | # | Topic | Materials |
 |:---:|-------|:---------:|
 | 01 | [The AI Revolution](lectures/01_intro.qmd) | Available |
-| 02 | [Deep Dive into LLMs](lectures/02_deep_dive.qmd) | Coming soon |
-| 03 | [Everyday Life with GenAI](lectures/03_everyday_life.qmd) | Coming soon |
+| 02 | [Deep Dive into LLMs](lectures/02_deep_dive.qmd) | Available |
+| 03 | [Everyday Life with GenAI](lectures/03_everyday_life.qmd) | Available |
 | 04 | [Reading Scientific Research](lectures/04_reading.qmd) | Coming soon |
 | 05 | [Literature Review](lectures/05_lit_review.qmd) | Coming soon |
 | 06 | [Custom GPT / Copilot](lectures/06_custom_GPT.qmd) | Coming soon |
