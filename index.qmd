@@ -34,7 +34,7 @@ The goal is not just to *use* these tools, but to use them **responsibly and rig
 | 02 | [Deep Dive into LLMs](lectures/02_deep_dive.qmd) | Available |
 | 03 | [Everyday Life with GenAI](lectures/03_everyday_life.qmd) | Available |
 | 04 | [Reading Scientific Research](lectures/04_reading.qmd) | Available |
-| 05 | [Literature Review](lectures/05_lit_review.qmd) | Coming soon |
+| 05 | [Literature Review](lectures/05_lit_review.qmd) | Available |
 | 06 | [Custom GPT / Copilot](lectures/06_custom_GPT.qmd) | Coming soon |
 | 07 | [Creativity & Brainstorming](lectures/07_creativity.qmd) | Coming soon |
 | 08 | [Coding & Data Analysis](lectures/08_coding.qmd) | Coming soon |
