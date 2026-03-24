@@ -10,6 +10,10 @@ This session covers the art of the academic literature review — first through 
 
 ## Debrief: NotebookLM Homework
 
+![](../slides/05_lit_review/slide-01.png){.slide-image fig-align="center" width="85%"}
+
+---
+
 ![](../slides/05_lit_review/slide-02.png){.slide-image fig-align="center" width="85%"}
 
 Students were asked to pick a paper, read it, and then work with **NotebookLM** to analyze it. Here are the key insights from the class discussion:
