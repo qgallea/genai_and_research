@@ -23,8 +23,8 @@ website:
             href: lectures/04_reading.qmd
           - text: "05 — Literature Review"
             href: lectures/05_lit_review.qmd
-          - text: "06 — Custom GPT / Copilot"
-            href: lectures/06_custom_GPT.qmd
+          - text: "06 — Skills: Building Reusable AI Tools"
+            href: lectures/06_skills.qmd
           - text: "07 — Creativity & Brainstorming"
             href: lectures/07_creativity.qmd
           - text: "---"
