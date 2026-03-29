@@ -17,7 +17,7 @@ This course explores how generative AI tools — large language models, coding a
 | 03 | Everyday Life with GenAI |
 | 04 | Reading Scientific Research |
 | 05 | Literature Review |
-| 06 | Custom GPT |
+| 06 | Skills: Building Reusable AI Tools |
 | 07 | Creativity & Brainstorming |
 | 08 | Coding & Data Analysis |
 | 09 | Deep Research |

@@ -196,7 +196,7 @@ From there, we follow the research process in sequence: reading papers, conducti
 
 Given that a 40-page paper can be generated in ten minutes, the evaluation is not going to be about documents. It is about thinking.
 
-The first component (20%) is an in-class group presentation of a **custom GPT** you design. The evaluation focuses on the problem you chose to solve, your critical assessment of what the tool can and cannot do, and your ability to connect the design choices to concepts covered in the course. A grading grid will follow shortly.
+The first component (20%) is an in-class group presentation of a **Claude Skill** you design. The evaluation focuses on the problem you chose to solve, your critical assessment of what the tool can and cannot do, and your ability to connect the design choices to concepts covered in the course. A grading grid will follow shortly.
 
 The remaining 80% is a **master's thesis research proposal** developed iteratively over the semester. Each week's topic — literature review, hypothesis generation, coding — maps directly onto a stage of your proposal. You work on something you genuinely care about, applying that week's concepts as you go. The semester ends with a 15-minute individual oral exam in which you present your proposal, walk through how you used generative AI at each stage, critically assess those choices, and answer conceptual questions about the course material. An example question: what is **temperature** in a language model, and when would you want it higher or lower?
 
