@@ -211,6 +211,7 @@ But is this really surprising? Think about it. If everyone runs the same input t
 This is a direct threat to innovation. Progress, in science, in business, in society, requires disagreement, exploration, and mistakes. If everyone's thinking is filtered through the same model, we lose the variance that produces breakthroughs.
 
 This also connects to the Acemoglu et al. (2026) paper on knowledge collapse that I have reviewed recently.
+
 ---
 
 ## The Cybernetic Teammate
@@ -252,6 +253,7 @@ Now let me connect the divergent/convergent framework directly to GenAI usage.
 **AI as a judge (convergent thinking).** Once you have a large set of options, whether research questions, identification strategies, or paper titles, you can ask the model to evaluate, classify, and rank them. However, always ask it to justify its reasoning. The justification is often more valuable than the ranking itself, because it forces the model to articulate criteria you might not have considered.
 
 This two-phase approach, generate with AI then evaluate with AI, is the pattern I use in my own multi-agent content pipeline. The `causal-content` skill generates concept angles, that I can filter. Also my `quentinize' skill creates always 3 variations such that I have something to compare and judge.
+
 ---
 
 ## GenAI for Creativity in Research: Divergent Use Cases
@@ -335,6 +337,7 @@ Your assignment: **use AI for both divergent and convergent thinking to work on 
 Concretely: start with a solo brainstorming session (analog, 10 to 15 minutes). Then use GenAI to expand your idea space (divergent). Then use GenAI to evaluate and prioritize (convergent). Document what the AI added, what you discarded, and what surprised you.
 
 The goal is not just to produce ideas. It is to develop a workflow for creative collaboration with AI that you can use throughout your research career.
+
 ---
 
 ## What's Next?
