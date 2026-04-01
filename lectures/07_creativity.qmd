@@ -32,9 +32,9 @@ Creativity shows up at every stage of the research pipeline. Let me illustrate.
 
 **Identifying strategies.** This is where economics gets inventive. Think of the clever use of colonial settler mortality as an instrument (Acemoglu, Johnson & Robinson 2001), or using river directions to study trade routes (as in Nunn & Trefler 2010, one of the papers I am currently replicating in RECAST). These are not textbook moves. They require creative leaps.
 
-**Problem-solving.** Anyone who has spent three days debugging a merge conflict or figuring out why their standard errors explode knows: research is full of moments where only lateral thinking gets you unstuck.
+**Problem-solving.** Anyone who has spent three days debugging econometrics code knows: research is full of moments where you need to pause and think deeply about alternative solutions.
 
-**Writing and storytelling.** You can have the most rigorous causal estimate in the world. If you cannot explain why it matters in plain language, it will not have impact. Hence, I push so hard on clear writing: short paragraphs, strong openings, no jargon shields.
+**Writing and storytelling.** You can have the most rigorous causal estimate in the world. If you cannot explain why it matters in plain language, it will not have impact. This is also why I often start with intuition, big picture, key takeaway and then eventually use jargon or show the math.
 
 ---
 
@@ -42,9 +42,9 @@ Creativity shows up at every stage of the research pipeline. Let me illustrate.
 
 ![](../slides/07_creativity/slide-04.png){.slide-image fig-align="center" width="85%"}
 
-Here is a truth that might feel counterintuitive in a course about GenAI: **many of my best ideas emerged away from the desk, and away from GenAI.** Running. Wood carving. Walking. You can see some of my hand-carved spoons in the picture. Each one is a small meditation.
+Here is a truth that might feel counterintuitive in a course about GenAI: **many of my best ideas emerged away from the desk, and away from GenAI.** Running. Wood carving (c.f. picture). Walking.
 
-This is not mysticism. There is solid neuroscience behind it. When you step away from focused work, your brain does not stop working on the problem. It just works differently.
+There is solid neuroscience behind it. When you step away from focused work, your brain does not stop working on the problem. It just works differently.
 
 Do you think that stepping away is wasting time? It is not. The shower insight, the idea that arrives while you are doing the dishes, these are real. And they are a feature of how your brain processes complex problems.
 
@@ -70,7 +70,7 @@ Hence, the practical takeaway is simple: if you have been stuck on a problem for
 
 So how do you cultivate this in practice? A few habits that work.
 
-**Switch modalities.** Do not code for eight hours straight. Alternate: code for a while, then read a paper, then write a paragraph, then do some admin. Each switch gives a different part of your brain room to breathe.
+**Switch modalities.** Do not code for eight hours straight. Alternate: code for a while, then read a paper, then write a paragraph, then do some admin. Of course spending enough time on each part and not switching carelessly every hour. 
 
 **Keep a capture tool.** When the idea arrives, and it will, at the worst possible moment, you need to write it down immediately. A notes app, a scrap of paper, a voice memo. The idea that seems unforgettable at 7am will be completely gone by lunch. I use this principle in my own workflow, which is why I built the `todo-capture` skill in Claude Code: frictionless capture, directly into Notion, so nothing gets lost.
 
@@ -120,7 +120,7 @@ Apply logical, empirical, or feasibility filters. For research ideas in economic
 
 **Feasibility.** Can it be tested with available data? The most brilliant idea in the world is useless if you cannot operationalize it. Data availability, identification strategy, sample size, these are the reality checks.
 
-**Impact.** Why does it matter? Not just for the academic community, but for the real world. This is something I always push in my consulting work at Enlighten Advisory: so what? Who cares? What changes if this is true?
+**Impact.** Why does it matter? Not just for the academic community, but for the real world. This is something I always we always discuss in my consulting work at Enlighten Advisory: so what? Who cares? What changes if this is true?
 
 Eliminate weak ideas ruthlessly. Refine promising ones. But only after you have given divergent thinking its full space.
 
@@ -210,8 +210,7 @@ But is this really surprising? Think about it. If everyone runs the same input t
 
 This is a direct threat to innovation. Progress, in science, in business, in society, requires disagreement, exploration, and mistakes. If everyone's thinking is filtered through the same model, we lose the variance that produces breakthroughs.
 
-This also connects to the Acemoglu et al. (2026) paper on knowledge collapse that I have reviewed recently. When AI systems are trained on AI-generated content, the distribution of ideas narrows. The tails get thinner. The weird, wonderful, wrong-but-productive ideas disappear. The same logic applies when humans over-rely on AI for ideation.
-
+This also connects to the Acemoglu et al. (2026) paper on knowledge collapse that I have reviewed recently.
 ---
 
 ## The Cybernetic Teammate
@@ -252,8 +251,7 @@ Now let me connect the divergent/convergent framework directly to GenAI usage.
 
 **AI as a judge (convergent thinking).** Once you have a large set of options, whether research questions, identification strategies, or paper titles, you can ask the model to evaluate, classify, and rank them. However, always ask it to justify its reasoning. The justification is often more valuable than the ranking itself, because it forces the model to articulate criteria you might not have considered.
 
-This two-phase approach, generate with AI then evaluate with AI, is the pattern I use in my own multi-agent content pipeline. The `causal-content` skill generates concept angles, the `linkedin-agent` drafts, and then I apply my own convergent judgment to select and refine. The AI handles the volume. I handle the taste.
-
+This two-phase approach, generate with AI then evaluate with AI, is the pattern I use in my own multi-agent content pipeline. The `causal-content` skill generates concept angles, that I can filter. Also my `quentinize' skill creates always 3 variations such that I have something to compare and judge.
 ---
 
 ## GenAI for Creativity in Research: Divergent Use Cases
@@ -292,7 +290,7 @@ And for convergent thinking, similar logic, different prompts.
 
 Here is a workflow you can try this week. Three steps.
 
-**Step 1: Upload 2 to 5 core PDFs** into a tool like NotebookLM, Claude, or any context-aware LLM. Ask it to extract from each paper: the research question, the method, the data, and the key findings.
+**Step 1: Upload 2 to 5 core PDFs** into  NotebookLM. Ask it to extract from each paper: the research question, the method, the data, and the key findings.
 
 **Step 2: Cluster and identify tensions.** Prompt: "Cluster the extracted questions into 3 themes. List unresolved tensions per theme (less than 3 bullets each)." This is where the magic happens. The model identifies contradictions and gaps across papers that you might miss when reading them one by one.
 
@@ -326,14 +324,6 @@ Practical safeguards.
 
 ![](../slides/07_creativity/slide-23.png){.slide-image fig-align="center" width="85%"}
 
-Let me walk through the course framework, Before / During / After, applied to creativity and brainstorming specifically.
-
-**BEFORE: Should I use GenAI?** Creativity benefits from productive struggle. Do your own brainstorming first, that 10 to 15 minute analog pass we just discussed. Ask yourself: do I want to develop my creative thinking (the process) or generate a list of ideas quickly (the outcome)? If process matters, start without AI and use it to expand later.
-
-**DURING: Filter In and Filter Out.** Use divergent prompts ("give me 20 wild ideas"), then convergent ones ("rank by feasibility"). Upload your own notes or papers as context for more relevant ideation. Try multiple tools and compare, different models produce different creative styles. And always take the time to check the quality of the output and how it interprets its sources.
-
-**AFTER: Evaluate and Adapt.** Were the AI-generated ideas better than your own, or complementary? Did AI help you think differently, or did it anchor your thinking? Next time, try varying the prompt style and comparing outputs. The meta-skill here is learning how to learn with AI.
-
 ---
 
 ## Homework
@@ -344,17 +334,16 @@ Your assignment: **use AI for both divergent and convergent thinking to work on 
 
 Concretely: start with a solo brainstorming session (analog, 10 to 15 minutes). Then use GenAI to expand your idea space (divergent). Then use GenAI to evaluate and prioritize (convergent). Document what the AI added, what you discarded, and what surprised you.
 
-The goal is not just to produce ideas. It is to develop a workflow for creative collaboration with AI that you can use throughout your research career. You now have the framework. Go test it.
-
+The goal is not just to produce ideas. It is to develop a workflow for creative collaboration with AI that you can use throughout your research career.
 ---
 
 ## What's Next?
 
 ![](../slides/07_creativity/slide-25.png){.slide-image fig-align="center" width="85%"}
 
-Next week is your **mid-term presentation**. Time to show where your research project stands.
+In two weeks is your **mid-term presentation**. 
 
-In two weeks, we move from creativity to execution: **Coding (vs. Vibe Coding) and Data Analysis (Vibe Data Science)**. We will dig into the difference between using AI to write code you understand versus using it as a black box that generates code you cannot debug. I have strong opinions on this. Stay tuned.
+In three weeks, we move from creativity to execution: **Coding (vs. Vibe Coding) and Data Analysis (Vibe Data Science)**.
 
 ---
 
