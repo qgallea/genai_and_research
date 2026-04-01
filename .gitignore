@@ -16,3 +16,6 @@ Thumbs.db
 
 # Temp files
 ~$*
+
+/.quarto/
+**/*.quarto_ipynb
