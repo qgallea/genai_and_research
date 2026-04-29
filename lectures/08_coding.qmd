@@ -22,8 +22,6 @@ Today's topic is something fairly important: how to code and deal with data and 
 
 You hear about a new dataset and you think it's gold, but when you open it you find tons of missing values and weirdly coded fields, and you realize the analysis you imagined is impossible — or at best, it requires heavy adaptation.
 
-> **Key insight**: A great research idea is only as good as the data behind it. The bottleneck is rarely creativity — it's data availability and quality.
-
 ---
 
 ### GenAI Brings Opportunities and New Problems
@@ -33,8 +31,6 @@ You hear about a new dataset and you think it's gold, but when you open it you f
 Data analysis is also the source of many issues, so it has to be done rigorously. **GenAI** can help, but it creates its own problems.
 
 The cartoon captures the dynamic well. Before, you'd post code on **Stack Overflow** and everyone would tell you you're wrong. Today it's the opposite: you give code to a model and it tends toward **sycophancy** — *"that's great, just change a little bit, you're doing great."* That is *not* the right mindset for research. In economics, the national sport is to destroy each other's research — hopefully constructively, not toxically.
-
-> **Key insight**: Stack Overflow used to keep us humble. LLMs flatter us. For research, that's a regression, not progress.
 
 ---
 
@@ -47,8 +43,6 @@ Data are key to approach **the truth** — some kind of objective result. But da
 This becomes a serious problem when combined with **bad incentives**, like the **publish-or-perish** dynamic in academia. Two issues reinforce each other and are hard to solve. First, you need to publish more to survive. Second, the KPI used to judge people is an **outcome measure** — how many papers, how many citations.
 
 That's the crux of the problem: you should be judged on the **process** (did you ask good questions, did you analyze carefully — even if the result is null and unexciting), but instead you're judged on the output. Humans then have plenty of behavioral biases. They move the needle. They forget that the ultimate goal is to help society. They want more citations. So they manipulate, reframe, repackage a different question, mine a new dataset for five papers — and a huge number of issues follow. There is no simple solution.
-
-> **Key insight**: Data lets us see the world objectively — but only if the incentives reward process, not output.
 
 ---
 
@@ -65,8 +59,6 @@ Proper data analysis takes time, but the steps are not complex. *Simplicity is t
 If you're not convinced for the sake of good research, here's the practical reason. After eighteen months of work, your paper is accepted — for me, this happened with a **PNAS** publication. Everything was done, referees passed, draft ready, publication a month away. Then they ask: *"Could you give us the code so we can double-check everything?"*
 
 Many people arrive at this step in a panic: *which file is it? final-final, or finalized-version-344?* They rerun the analysis and the graph doesn't match the one in the paper. **That's the worst.** Luckily I was always a maniac about this — let me show you exactly how I do it.
-
-> **Key insight**: Replicability is not optional. The journal will ask. If you can't reproduce your own results, your paper dies on the runway.
 
 ---
 
@@ -101,8 +93,6 @@ Every project has the same structure:
 
 Someone with only `raw_data/` and your `code_build/` scripts should be able to reproduce your final dataset without asking you anything.
 
-> **Key insight**: Anyone with your raw data and your code should be able to recreate your entire analysis. That's the test of replicability.
-
 ---
 
 ### Replicability and File Numbering
@@ -116,8 +106,6 @@ Each `code_run` step generates output in `results/` — regression tables in LaT
 This means a referee asking *"why did you drop this control?"* a year later doesn't catch you off guard. You re-read the narrative: *"This control was problematic at this stage because of X."* Everything is documented.
 
 You can also have side folders for `literature/`, `slides/`, and the `final_paper/`.
-
-> **Key insight**: Document decisions while they're fresh. Future-you and future-referee will thank you.
 
 **Audience question**: *Do you generate LaTeX files directly from Stata?*
 
@@ -141,8 +129,6 @@ Example: GDP per capita is `gdp_pc`; PPP version is `gdp_pc_ppp`; log of that is
 
 This convention has saved me a lot of time and a lot of mistakes.
 
-> **Key insight**: Pick a naming convention and stick to it. Cheap to adopt, expensive to skip.
-
 ---
 
 ### Comment and Structure Your Code
@@ -154,8 +140,6 @@ Well-structured, commented code is essential. We'll discuss the pros and cons of
 This is also why I love **Python notebooks** (Jupyter). A notebook is a rich document combining code, **Markdown** text (with LaTeX equations), and rendered output in one place. You can even install **Stata** inside Jupyter if you prefer that language. Code cells, output cells, and explanatory text live side by side. Change the code, the report updates.
 
 Beyond raw comments, the notebook structure forces clarity: *here's the graph, here's what I observe, here's the conclusion, here's the next step.*
-
-> **Key insight**: A notebook is your code, your comments, and your report — in one file. Use them.
 
 ---
 
@@ -170,8 +154,6 @@ A story. During my postdoc at the **University of Zurich**, I presented a projec
 On the website hosting the data, the map showed **high PDSI in red**, which I assumed meant "dry." I built the entire analysis on that assumption. **It was the opposite** — high PDSI means *lots of water.* I had worked day and night, burned out, and the whole thing went straight in the trash because the relationship was reversed everywhere.
 
 Being careful about small details from the start is valuable.
-
-> **Key insight**: One unchecked assumption can invalidate months of work. EDA is your insurance policy.
 
 ---
 
@@ -198,8 +180,6 @@ A few simple checks I do every time:
 
 All of this *before* you ever touch a fixed-effects regression.
 
-> **Key insight**: Simple descriptive statistics, done rigorously, will tell you more about your dataset than any fancy model.
-
 ---
 
 ### Visual AND Numerical: Anscombe's Quartet
@@ -213,8 +193,6 @@ Numerical statistics give precision: average, median, standard deviation. But th
 The classic example is **Anscombe's quartet**: four datasets with the same mean, variance, correlation, regression slope, and intercept — yet wildly different structures. A linear model fits the first; the second needs a quadratic; the third has a **leverage outlier** pulling the regression; the fourth shows a vertical line of values with one outlier doing all the work.
 
 But you also can't trust visuals alone. We have **apophenia** — the cognitive bias of seeing patterns in noise (basically the explanation for astrology) — and **confirmation bias**. To fight these biases, you need the precision of numbers.
-
-> **Key insight**: Numbers and pictures together. Either alone will deceive you.
 
 ---
 
@@ -251,8 +229,6 @@ But they didn't — women did better than men in Economics too. You can recomput
 
 What's happening is a **weighting problem**. Finance is very hard to pass — 90–100% failure rate — while Economics is very easy: 0–5% failure. **Women are over-represented in the hard program.** When you compute the overall average, you're mixing apples and oranges: women look worse not because they perform worse, but because they're concentrated where everyone fails.
 
-> **Key insight**: An overall average can flip the within-group truth. Always look at heterogeneity — Simpson's paradox is one reason heterogeneous treatment effects matter.
-
 ---
 
 ## Using GenAI: The Promise and the Peril
@@ -279,8 +255,6 @@ In the business world, you have these "bound to happen" examples. A company **vi
 
 The funny part: the chatbot apologized. *"Sorry for the catastrophic failure on my part."* That doesn't restore the data.
 
-> **Key insight**: An AI apology is not a backup.
-
 ---
 
 ### The 1,000 Papers Problem
@@ -291,8 +265,6 @@ A common pattern in industry: companies vibe-code an entire stack, and then they
 
 Back to research. **David Yanagizawa-Drott** (University of Zurich) and co-authors used the **APE pipeline** (*Autonomous Policy Evaluation*) to automatically produce on the order of **1,000 papers**. The issue he himself raises: *how do we know it worked? Who reads 1,000 papers?* Nobody. The bottleneck for AI-generated research is not output — it's **human expertise to verify the output**. You can generate enormous amounts of content, but is any of it *correct?*
 
-> **Key insight**: Generation is cheap. Verification is the bottleneck.
-
 ---
 
 ### Agentic AI vs Human Economists
@@ -302,8 +274,6 @@ Back to research. **David Yanagizawa-Drott** (University of Zurich) and co-autho
 There's another paper comparing **agentic AI systems** to **human economists** on the same empirical task — pitting AI competence against ours. The systems compared were **Claude Code (Opus 4.6)**, **Codex (GPT-5.4)**, and **Codex (GPT-5.3-Codex)**. The author generates 300 papers and 900 referee reports, and reports that AI runs cluster near the human median estimate but with much **tighter dispersion** — fewer extremes.
 
 Interesting read, but the ground truth is unknown, and the work was judged by **LLMs as referees** — no humans actually checked. LLMs tend to validate what other LLMs would do; they're rating their own kind. *You can't grade your own homework.* You need someone with different skills to evaluate. Without that, the ranking is misleading.
-
-> **Key insight**: AI judging AI is not evaluation — it's an echo chamber.
 
 ---
 
@@ -329,8 +299,6 @@ Another project: I asked Claude to build an interactive website to illustrate ec
 
 I dug into the code. The model had stored **precomputed values in a JSON file** — the live updates were fakes. Just placeholders with hard-coded numbers. The model never mentioned this.
 
-> **Key insight**: If something seems too fast, too smooth, or too magical — it probably is. Verify the mechanism, not just the surface.
-
 ---
 
 ## A Spectrum of Risk
@@ -344,8 +312,6 @@ The cautionary tales above motivate a more concrete framework. GenAI can be used
 3. **Coding**
 4. **Vibe Coding**
 5. **Vibe Datascience**
-
-> **Key insight**: Not all GenAI uses carry equal risk. Map your task to its place on this spectrum before you decide what to delegate.
 
 ---
 
@@ -362,8 +328,6 @@ Commenting code is a good case for GenAI. It's boring and painful, but you alrea
 ![](../slides/08_coding/slide-26.png){.slide-image fig-align="center" width="85%"}
 
 But — always apply our **first principle: think about what you gain and what you lose.** You gain time. You may lose the **final pass** where you re-read your own code, double-check it, and catch the conceptual mistakes that aren't bugs (suboptimal logic, unused code, things that ran but shouldn't have).
-
-> **Key insight**: Every time you delegate, ask: what verification step am I skipping?
 
 ---
 
@@ -384,8 +348,6 @@ In **Google Colab** you have **Gemini** built in. When an error pops up, there's
 Why? Because in more complex problems, **automated debugging is risky.** You may end up with **no error message but wrong methodology**. Worse, if the model is incentivized to "make it run," it can do strange things — including **inventing data** to align with a hypothesis and produce a clean result. If the implicit goal is "make this code succeed," the model may invent its way to a "successful" result.
 
 The rule, as always: **augment, don't automate. Filter out. Understand the fix before you apply it.**
-
-> **Key insight**: A "no errors" output is not the same as a correct analysis. The bug in the methodology has no error message.
 
 ---
 
@@ -408,8 +370,6 @@ The nightmare scenario: you vibe-code a project, submit it, and at the last step
 The same logic applies to data science. You can ask an AI for an **identification strategy**, but you must give the right context (**filter in**), understand the answer, check the source, and validate the solution.
 
 In a **causal inference** course I teach at **EPFL**, students have full AI access for their final project. I still see the full distribution of outcomes. Why? Because the students who didn't understand the class can't ask the right question, and can't tell when the AI's suggestion is wrong. The AI proposes a model; without expertise, the student has no way to push back.
-
-> **Key insight**: AI amplifies existing skill — it does not replace it. You need the expertise to drive the tool.
 
 ---
 

@@ -24,8 +24,6 @@ One student discovered **LeapSpace**, an Elsevier tool that pulls actual peer-re
 
 Another student tested **Consensus** (available at a 40% discount). They highlighted two strengths: clickable links that let you download papers directly, and the ability to go from vague queries ("what is the best...") to highly specific ones. You can categorize results on the side panel for clean reference management. The instructor confirmed that Consensus also lets you filter by **journal quality quartile** -- a feature that addresses one of the biggest limitations of AI-powered literature tools: surfacing low-quality sources alongside high-quality ones.
 
-> **Key insight**: The main risk with AI literature review tools is hallucinated sources. Any tool that lets you click through to verify the actual paper -- and filter by journal quality -- is significantly more trustworthy.
-
 Now, on to today's topic: **skills**. This is not only important for the midterm evaluation, but it represents a genuinely powerful approach to working with LLMs. The problem is familiar to anyone who uses AI regularly: you open new chats and keep re-explaining yourself. Memory and custom instructions help, but they are not precise enough for structured, repeatable tasks. A **skill** packages your methodology, context, and expectations into a reusable tool that delivers consistent quality every time.
 
 ---
@@ -51,8 +49,6 @@ Every major platform now offers some version of reusable AI tools -- but not all
 Every major platform now offers some version of reusable AI tools. OpenAI has **Custom GPTs** -- essentially a chat with saved instructions and reference files, like an additional system prompt you can always access. Google has **Gems**, which work similarly through a builder interface. Microsoft **Copilot Agents** (via Copilot Studio) offer the same concept.
 
 Anthropic created **Skills**, and they have a distinctive advantage: skills are just text files. Because of this, they are inherently portable. You can take a skill file and use it in any conversation with any LLM -- it should work to some extent. For now, skills are most tightly integrated with **Claude Code**, which understands the folder structure and manages skill loading automatically.
-
-> **Key insight**: Skills are platform-portable because they are plain text. Unlike Custom GPTs or Gems, you are not locked into one provider's interface.
 
 ---
 
@@ -103,8 +99,6 @@ The `SKILL.md` file has two parts: a **front matter** (in YAML format) and a **b
 Why separate things into subfolders instead of one long file? Because the **context window** is a scarce resource. You do not want to flood it with information that is not needed for the current task.
 
 Skills use **progressive disclosure** to manage this. You can have dozens of skills available, but only the front matter -- a short description of up to 1,024 characters -- is always loaded. That tiny text is enough for Claude to decide "this task matches that skill." Only then does it load the full `SKILL.md`. And reference files? They are loaded and **unloaded** as needed -- brought in for a specific step, then released to free up context space.
-
-> **Key insight**: Loading everything at once degrades performance. A well-designed skill keeps the main file lean and puts supporting material in reference files that load on demand. Think of the context window as RAM -- you want to use it efficiently.
 
 This means a key part of skill design is optimization: can you cut the skill's length in half and still get the same output quality? Often, yes. And you should test this.
 
@@ -257,8 +251,6 @@ The instructor noted that he has never actually used the skill's output for any 
 
 A student asked whether you need to feed the skill your entire expertise. The answer: Claude already has broad knowledge, and if you have enabled **memory across chats**, it accumulates personal context over time (work projects, teaching, preferences). This is a personal choice with trade-offs -- you are sharing significant information with the platform. But combined with a well-designed skill, it means you rarely need to re-explain your background.
 
-> **Key insight**: Even a "simple" writing skill reveals a key principle -- use the skill output as a draft, not a finished product. The human still edits, judges, and owns the final output.
-
 ---
 
 ### Advanced: The /super-referee Skill
@@ -282,8 +274,6 @@ The super-referee runs a **four-round review pipeline**, grounded in Berk, Harve
 The reference files are personalized and domain-specific. For example, there is a review framework for **difference-in-differences** methodology based on the practitioner guide that the instructor frequently cites. Another reference draws on concepts from *The Causal Mindset* for challenging causal claims in non-technical terms. These references do not contain the full papers -- they are curated structures *based on* those papers, which is more efficient.
 
 The four rounds work as follows: Round 1 assesses importance and fit ("Is this paper worth publishing? Would I be proud to have written it?"). Rounds 2 and 3 handle the technical deep dive using the methodology-specific reference files. Round 4 is a self-challenge round -- crucial for LLMs, which tend to be overly accommodating. Left unchecked, the model will inflate minor comments to justify a "revise and resubmit" verdict. This round forces it to ask: "Are my critiques actually substantive, or am I nitpicking to seem thorough?"
-
-> **Key insight**: LLMs are natural people-pleasers. In a referee skill, this means they will always lean toward "revise and resubmit." You need an explicit self-challenge step to counter this bias.
 
 ---
 
@@ -367,8 +357,6 @@ Results: the full version took about 10 seconds longer and consumed roughly 7,00
 
 The secret to making it lighter: a **reference routing table**. Instead of loading entire reference files, the skill specifies which *sections* to load based on the paper's methodology. Reviewing a difference-in-differences paper? It loads only the DiD review framework, not the instrumental variables section. This means you can have rich, detailed references without paying the context window cost for irrelevant portions.
 
-> **Key insight**: Shorter does not mean worse. A well-optimized skill with smart reference routing can outperform a longer, brute-force version -- faster, cheaper, and more precise.
-
 ## Mid-Term Evaluation
 
 With the technical foundations covered, let us turn to what you need to deliver.
@@ -420,8 +408,6 @@ Recommended presentation structure:
 A student asked whether the skill must be connected to research. Ideally yes, but the instructor accepts skills related to studying and academic work more broadly. The key is that it should be something genuinely useful and repeatable.
 
 Another student asked about overlap with existing skills on skillsmp.com. This is not a concern -- the marketplace has thousands of skills in the research category. The evaluation focuses on the *process* and critical thinking, not just the output. Downloading an existing skill and submitting it would be obvious from the conversation logs.
-
-> **Key insight**: The midterm mirrors the course philosophy -- it is about process over output. Build, test, iterate, and critically evaluate. Do not just submit a polished result; show the messy, honest journey of getting there.
 
 ## Closing and Next Steps
 

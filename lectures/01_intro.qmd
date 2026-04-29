@@ -138,8 +138,6 @@ Last week, I ran an experiment. Using a single prompt — one question — I ask
 
 You will read that paper before next week's session and share your assessment in class.
 
-> **Key insight**: This was the most significant moment I have experienced with generative AI — larger than the initial shock of ChatGPT. Ten minutes of human input producing a document of this quality is not an incremental improvement. It is a qualitative shift.
-
 ---
 
 ### No Wait! 5 Papers per Day!
@@ -212,8 +210,6 @@ Both are real concerns, and both will come up throughout the semester. The impac
 On the second:  the automation (APE project) is partly motivated by a social goal — making rigorous impact evaluation accessible to organisations that could never afford a team of PhD researchers and econometricians. Think of a public health agency in a low-income country trying to evaluate whether a malaria bed-net programme works. That kind of analysis currently requires rare expertise. If it can be automated responsibly, that is a genuine good.
  But of course, the concentration of AI capability in a handful of wealthy countries and companies is a geopolitical fact we cannot ignore. The same tools that can spread opportunity can also entrench inequality.
 
-> **Key insight**: For every opportunity that generative AI creates, there is typically a corresponding risk. We tend to see the productivity gain immediately. We tend to overlook what we lose. This course trains you to hold both sides of that ledger simultaneously.
-
 ---
 
 ## What Is AI?
@@ -261,8 +257,6 @@ Within the broad category of AI, there are important distinctions. **Machine lea
 ![](../slides/01_intro/slide-27.png){.slide-image fig-align="center" width="85%"}
 
 This is a point I care about deeply. AI, at its core, detects patterns and correlations. A strong predictor is not necessarily a cause. Consider a simple example: you can predict today's outdoor temperature by observing what clothes people are wearing on the street. The clothing is not causing the weather — it is a consequence of it. Yet it is a useful predictor. For prediction tasks, you do not need to understand causes.
-
-> **Key insight**: Predictive AI is not a tool for answering causal questions. Correlation does not imply causation, and this remains true when the correlation is detected by a billion-parameter neural network.
 
 ---
 
@@ -324,8 +318,6 @@ The perceptron dates to the 1960s, but early optimism gave way to a prolonged sl
 
 The underlying difficulty is captured in a counterintuitive observation: some things that are very hard for humans are easy for AI (chess), while some things that are trivially easy for humans are hard for AI (reliably distinguishing a cat from a dog in an arbitrary photograph). Tasks that seem simple often require generalisation that rule-based systems cannot provide. The computational power and data needed to solve them were not yet available.
 
-> **Key insight**: Easy things are hard — for AI and for the people trying to build it.
-
 ---
 
 ## Why the AI Revolution Now?
@@ -351,7 +343,6 @@ For a deeper and beautifully produced introduction to how neural networks work, 
 ### AI's Impact
 
 ![](../slides/01_intro/slide-36.png){.slide-image fig-align="center" width="85%"}
-
 
 The final section of today's session: the impact of AI. This is the most contested terrain — and, for this course, the most important.
 
@@ -405,7 +396,6 @@ The **radiologist paradox** is the canonical counterexample. Deep learning can d
 
 ![](../slides/01_intro/slide-42.png){.slide-image fig-align="center" width="85%"}
 
-
 Macro predictions about AI's economic impact vary wildly and should be treated with scepticism. Goldman Sachs and McKinsey have published large figures — 17 trillion dollars in added GDP, and similar claims — with methodologies that do not survive scrutiny.
 
 A more rigorous attempt comes from **Daron Acemoglu**. In "The Simple Macroeconomics of AI," he applies standard economic modelling to estimate AI's likely impact. His conclusion is sobering: the effect resembles previous technological shocks in magnitude, not a civilisational transformation. His estimates are probably already outdated given the pace of change, but the methodological approach — grounding projections in economic theory and explicit assumptions — is the right one.
@@ -423,7 +413,6 @@ Acemoglu identifies three channels through which AI affects the economy: **autom
 ### 10-Year Productivity Gains from AI
 
 ![](../slides/01_intro/slide-44.png){.slide-image fig-align="center" width="85%"}
-
 
 Acemoglu's model implies that total factor productivity (**TFP**) gains over the next decade from AI will be less than 0.55%. This is far below the hype. Whether he is right is genuinely uncertain — his assumptions may be too conservative about the pace and scope of automation. But his paper forces a useful discipline: before claiming AI will transform the economy, specify the mechanism and quantify the effect.
 
@@ -543,8 +532,6 @@ The deeper issue is not the mistake but the logic behind it: someone decided tha
 
 **The same dynamic is playing out in university settings. Teaching assistants hold office hours; students do not come. They ask ChatGPT instead. But a teaching assistant is not just a source of correct answers.** They are a person who passed the exam, navigated the confusion, knows the shortcuts and the dead ends. Treating them as a slower, less convenient version of an AI is a significant loss — one that is invisible in any productivity metric.
 
-> **Key insight**: When we optimise for outcomes alone, we lose the process. And sometimes — in learning, in relationships, in creative work — the process is the point.
-
 ---
 
 ### AI's Impact on Teamwork: The Cybernetic Teammate
@@ -606,8 +593,6 @@ The interesting finding is not the brain imaging — it is what it implies about
 ![](../slides/01_intro/slide-62.png){.slide-image fig-align="center" width="85%"}
 
 In the same study, 83% of participants who wrote their essay with ChatGPT assistance could not later quote from it. In the comparison groups — writing independently — only about 10% had the same problem. The practical implication for students is direct: if you generate text you do not remember writing, what have you actually produced? The document exists; the knowledge does not.
-
-> **Key insight**: The product and the learning are not the same thing. Optimising for the product while bypassing the process can leave you with the output and none of the capability.
 
 ---
 
@@ -696,7 +681,6 @@ As we have seen today, AI is transforming our world and raise many questions. Th
 
 ![](../slides/01_intro/slide-73.png){.slide-image fig-align="center" width="85%"}
 
-
 **Let me close with a personal example that crystallises the central question of this course.** Here are two things I can do: I carve wooden spoons by hand, and I used to publish research in top academic journals.
 
 **Surprisingly, it is the second one that risks automation with GenAI. The one requiring a Ph.D and years of practice. However, is it a problem? For research I care about the output mainly.** I want to answer complex questions rigorously and help the world.
@@ -704,9 +688,6 @@ If AI can do it faster with less coding issues, without me or an assistant requi
 
 **However, for hand carving wooden spoons, I care about the process.** I do it because I love this slow artistic process where you are fully immersed in the process, feeling the grain of the wood, doing something with your hand away from the computer, turning a hard block of wood, into an elegant and light object that have been used for centuries.
 The whole value of this object comes from the process.
-
-> **Key insight**: The question to carry into every AI decision is this — do I care about the outcome, or the process? When the process is what matters, automating it is not an improvement. It is a loss.
-
 
 ---
 

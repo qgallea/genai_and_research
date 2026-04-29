@@ -26,8 +26,6 @@ Students were asked to pick a paper, read it, and then work with **NotebookLM** 
 
 **On abstracts vs. AI summaries:** An interesting discussion emerged about why some students prefer reading an AI-generated summary over the paper's own abstract. The hypothesis: abstracts are written with perverse incentives — authors optimize for editors, reviewers, and peers who might cite them, not for general comprehension. AI summaries, by contrast, lower the **cognitive cost of entry** into a paper by using more accessible language. This doesn't replace reading the paper, but it can make the first encounter less intimidating.
 
-> **Key insight**: NotebookLM is a grounded model — it prioritizes its sources — but it still draws on general LLM knowledge to fill gaps, which can lead to subtle extrapolations. Always check the inline references, and feed it the right technical sources to get the depth you need.
-
 ---
 
 ## Today's Agenda
@@ -92,8 +90,6 @@ Look for recent papers by these authors to see where the field is heading. Look 
 
 Once you've identified **seminal work**, use **backward and forward citation tracking**. Backward: read their literature review and check who they cite. Forward: on Google Scholar, click the "Cited by" count to see who has built on their work since publication. For example, "The Jagged Technological Frontier" already has over 1,500 citations — clicking through reveals more recent work like NAS papers from 2024 and AI/ML reviews in *Nature*.
 
-> **Key insight**: Don't start with keyword search. Start with key authors and landmark papers, then mine citations backward and forward to map the field.
-
 ---
 
 ## Reading and Annotating
@@ -147,8 +143,6 @@ Like it or not, there is a **marketing aspect** to academic writing. You're tryi
 **Signaling through references**: Your citation list signals where you think the paper belongs. If you want to publish in a top-five economics journal but only cite *Nature* and *Science*, the editor sees a mismatch. If you want a general science journal but only cite field-specific outlets, same problem. This also explains why papers from international organizations — the UN, the World Bank — are under-cited in academia: they signal a different audience.
 
 **The publish-or-perish problem**: The pressure to publish creates bad incentives — **p-hacking**, inflated findings, quantity over quality. Focus shifts to outcomes (publication count) rather than process (doing good research). And there's already far too much research being produced for anyone to read. As an example, the Autonomous Policy Evaluation project by David Yanagizawa-Drott published 168 papers in a single batch — nobody is reading all of them.
-
-> **Key insight**: The literature review is not a neutral summary. It's a strategic argument that positions your research. Understanding the incentive structure of academia — for better and worse — helps you read literature reviews more critically and write them more effectively.
 
 A student raised an important question: will AI make the overproduction problem worse? If we can generate papers faster, but editors and reviewers are already overwhelmed, what happens? There's no clear answer yet, but it's worth watching.
 
@@ -213,8 +207,6 @@ The next section identifies three specific aspects that make LLMs different from
 Finally, they introduce their key concept: the **jagged technological frontier**. The idea is that tasks very similar from a human perspective can fall on opposite sides of AI's capability boundary — some are within AI's frontier, some are beyond it. They coined a catchy term, paired it with a compelling visual in the paper, and created something memorable.
 
 When a literature review is done this well, it's genuinely exciting to read. You see the architecture of the argument, the strategic choices, the storytelling. That's the standard to aim for.
-
-> **Key insight**: A great literature review reads like a story, not a list. It establishes importance, maps the landscape, and builds inevitably toward the gap your research fills.
 
 ---
 
@@ -297,8 +289,6 @@ The recommended approach is **augmentation** — using AI to assist at specific 
 **Organizing themes**: When you've collected many papers and need to create sub-themes (Step 3), AI is good at perceiving the big picture and suggesting how to group and articulate your literature. Upload your notes or paper summaries and ask for a thematic structure.
 
 **Reading and note-taking**: As covered in the previous session, NotebookLM helps with extracting key information, taking notes, and understanding complex papers.
-
-> **Key insight**: Use AI where only the outcome matters (filtering, extracting, organizing). Do the work yourself where the process matters (evaluating quality, understanding arguments, making judgment calls about what's seminal).
 
 ---
 

@@ -22,8 +22,6 @@ Today we cover **general use** of GenAI tools. This session starts from the fund
 
 For this course, we will use **Claude** as our primary tool. The university is covering your Pro license for the semester --- details will be confirmed next week. Beyond the ethical considerations discussed in class (Anthropic's refusal to remove safety guardrails from its existing Pentagon contract --- specifically prohibitions on autonomous weapons and domestic mass surveillance --- which led to a government ban on Anthropic products, while OpenAI moved to fill the gap with its own Pentagon deal), Claude is the tool we will focus on.
 
-> **Key insight**: Even if a perspective seems extreme, engage with it --- you either learn something new or sharpen your own position.
-
 ---
 
 ### This Is Not 2024
@@ -31,8 +29,6 @@ For this course, we will use **Claude** as our primary tool. The university is c
 ![](../slides/03_everyday_life/slide-02.png){.slide-image fig-align="center" width="85%"}
 
 Most GenAI trainings in 2024 focused almost entirely on **prompting techniques**. We are past that. Today's tools offer a rich set of functionalities --- projects, connectors, skills, agents, code execution --- that go far beyond "write a better prompt." Prompting still matters, but it is the floor, not the ceiling.
-
-> **Key insight**: If your GenAI workflow is still just "type a prompt, read the answer," you are using 2024 methods in a 2026 world.
 
 ---
 
@@ -74,8 +70,6 @@ What makes this example genuinely interesting is what it reveals about how **non
 
 A **reasoning model** works differently. It thinks through intermediate steps *before* producing an answer --- triggering a calculator or code interpreter to compute first, then responding. With a reasoning model, you would rarely see this kind of initial error.
 
-> **Key insight**: The model's self-correction is arguably a sign of intelligence. Humans would benefit from being this willing to publicly say "I was wrong --- here is the correct answer."
-
 ---
 
 ### Benchmark Performance
@@ -85,8 +79,6 @@ A **reasoning model** works differently. It thinks through intermediate steps *b
 One way humans measure intelligence is through difficult exams. LLMs perform well on the bar exam, the medical licensing exam, math competitions, and many other professional benchmarks. What is truly remarkable is not any single score, but the breadth: a human who passes the bar exam is unlikely to also excel at the medical licensing exam and a graduate math test. LLMs can do well across all of them simultaneously.
 
 These were GPT-4 results; newer models have improved significantly. But we should maintain perspective: **multiple-choice exams are a narrow measure**. The models are effectively working "open book" with training data that likely includes exam-related material. Strong benchmark performance does not automatically translate to real-world capability.
-
-> **Key insight**: LLMs are uniquely broad generalists --- but breadth on standardized tests is not the same as depth of understanding.
 
 ---
 
@@ -99,8 +91,6 @@ Beyond benchmarks, we have **randomized experiments** measuring real-world impac
 How is "quality" measured in these studies? Typically through **blind human grading**: domain experts evaluate outputs without knowing whether AI was involved. Researchers also test whether graders can detect AI involvement and whether that detection affects their ratings.
 
 For comparing models against each other, platforms like **LM Arena** (arena.ai) run standardized benchmarks across text, code, vision, and other domains. Claude leads on text tasks, though frontier models (Claude, ChatGPT, Gemini) are relatively close. The differences often come down to subjective preferences --- tone, style, degree of agreeableness --- rather than raw capability. It is like working with different people: each has a distinct personality.
-
-> **Key insight**: The quality gains from AI assistance are not marginal --- they are large enough to transform how work gets done. But "which model is best" depends heavily on the task and your preferences.
 
 ---
 
@@ -126,8 +116,6 @@ Interestingly, the **human-plus-AI** condition did not reach the same creativity
 
 An important caveat: the participants were a **representative sample of US adults**, not professional writers or trained creatives. The finding tells us that for non-experts doing creative tasks, AI can outperform --- but it says less about whether AI would beat top human creatives.
 
-> **Key insight**: AI can be more creative than average humans on standardized creative tasks --- but the sample matters enormously when interpreting these results.
-
 ---
 
 ## Myth 3: LLMs Make Mistakes
@@ -150,8 +138,6 @@ When I asked Claude Code about it, the answer was revealing: "Oh, actually those
 
 The right framing is not "LLMs make mistakes, therefore they are useless" but rather: **what types of mistakes do they make, and are those mistakes better or worse than human mistakes?** Humans have agendas, emotions, and incentives to deceive. LLMs have different failure modes --- hallucination, pattern-matching errors, silent fabrication. The question is comparative: when you hire a research assistant, you expect mistakes and you double-check. The same applies to an LLM.
 
-> **Key insight**: The question is not "does AI make mistakes?" --- it is "does AI make *fewer* or *different* mistakes than the alternative, and can you catch them?"
-
 ---
 
 ### Solution 1: Know Enough to Judge
@@ -163,8 +149,6 @@ The right framing is not "LLMs make mistakes, therefore they are useless" but ra
 The first solution is to recognize that **many tasks have no ground truth**. If you are brainstorming paper titles, there is no "right" answer --- you get suggestions, keep the good ones, discard the rest. In these cases, the concept of "mistakes" barely applies.
 
 But when ground truth matters, **you need enough expertise to judge the output**. This is the critical point. A colleague generated a complete master thesis draft in 10 minutes using Claude Code. Other faculty panicked: "Students will just do this!" But the reality is more nuanced. You need sufficient experience to ask the right questions *and* to evaluate whether the answers are correct. Without that expertise, you will receive confident-sounding output with no ability to detect errors.
-
-> **Key insight**: AI output is only as good as your ability to judge it. If you cannot tell whether the answer is right, the tool is dangerous, not helpful.
 
 ---
 
@@ -182,8 +166,6 @@ There is also a **human motivation problem**. Even experienced users face the te
 
 One business automated their entire coding pipeline and was generating hundreds of thousands per month. But when they needed to update something, they discovered they could not touch anything without breaking the system --- and they did not understand why. That is the security risk of **vibe coding**: it works until it does not, and then nobody knows how to fix it.
 
-> **Key insight**: The poster of "RIP legal work" could only verify Claude's answer because a human expert had already provided the ground truth. Without that check, confident-sounding nonsense looks identical to a correct answer.
-
 ---
 
 ### Solution 2: Ask for Sources
@@ -200,8 +182,6 @@ But here is the key: I then **verified everything**. I checked the estimations, 
 
 This matters because the most dangerous AI errors are not bugs --- they are **code that runs perfectly but produces wrong results**. No error message, no crash, just incorrect output that looks entirely plausible.
 
-> **Key insight**: Always verify sources. Better yet, create adversarial checks --- use a second agent whose only job is to find mistakes in the first agent's work.
-
 ---
 
 ### Solution 3: Provide the Source Material
@@ -213,8 +193,6 @@ This matters because the most dangerous AI errors are not bugs --- they are **co
 The third solution: **provide the source material yourself**. Rather than asking the model to retrieve information (where it might hallucinate), give it the documents to work from.
 
 **NotebookLM** excels at this. It is designed to work exclusively from sources you upload, it references them intuitively, and it has very low hallucination rates. Any LLM can accept uploaded files, but NotebookLM is specifically designed to generate responses grounded in your uploaded sources, with built-in citation and strict limits on using training data --- resulting in substantially lower hallucination rates than general-purpose LLMs.
-
-> **Key insight**: The safest way to avoid hallucination is to give the model the source material and ask it to work from that --- not from its training data.
 
 With the myths addressed and a toolkit of solutions for handling mistakes, we now turn to the practical question: how do you actually get good output from these tools?
 
@@ -244,8 +222,6 @@ A fun aside on **prompt injection**: one LinkedIn user embedded instructions in 
 
 The bottom line on "dull output": usually, the problem is not the tool --- it is how you are using it. Garbage in, garbage out.
 
-> **Key insight**: You cannot know how often AI text fools you, because by definition you miss those cases. Your detection ability is worse than you think.
-
 ---
 
 ### The Three Elements of a Good Prompt
@@ -262,8 +238,6 @@ While we have moved well beyond "just prompting," the fundamentals still matter.
 
 This can be summarized simply: **be a good manager**. Explain the task clearly, set expectations, provide examples. Most complaints about AI output ("it is all over the place") trace back to vague instructions with no examples and no constraints.
 
-> **Key insight**: Prompting well is just management. If you would not give a human assistant a task with zero context and no examples, do not do it to an LLM either.
-
 ---
 
 ### A Concrete Prompting Example
@@ -273,8 +247,6 @@ This can be summarized simply: **be a good manager**. Explain the task clearly, 
 Here is a concrete example. **Context**: "I am a master's student in economics writing a thesis on labor market effects of automation. My thesis advisor is obsessed with causality, so I need to distinguish carefully between correlation and causation." This framing adjusts the model's tone, technicality, and emphasis --- subtle but powerful.
 
 **Task**: "I have written a literature review [attached]. Identify logical weaknesses." One precise task reduces uncertainty in output quality. Compare this to asking Claude Code to "generate a full website about my research" --- behind that single request are hundreds of sub-tasks (read papers, define structure, write code, run estimations, summarize results), and at any point the model might cut corners or silently fill gaps.
-
-> **Key insight**: One precise task with clear context will always outperform one vague mega-request.
 
 ---
 
@@ -295,8 +267,6 @@ Practical limits to keep in mind: **32 MB per file** and a **maximum of 20 files
 Start simple, then iterate. Do not over-engineer your first prompt --- begin with minimal context, see what you get, then refine. But if the model gets stuck in a wrong direction and keeps circling back to it, **start a fresh chat**. Even Anthropic recommends this.
 
 The most important iteration rule: **be specific with feedback**. "Make it shorter" is vague and leads to frustrating loops where the model cuts the wrong parts. Instead: "Cut the first two paragraphs, expand the conclusion, keep the methodology section unchanged." Specificity saves time.
-
-> **Key insight**: When iterating, do not say "make it better." Say exactly *what* to change and *how*.
 
 ---
 
@@ -334,8 +304,6 @@ Here is the Causal Detectives project in action. A social media claim reads: "Re
 
 The project automatically analyzes any claim against concepts from the book, rates its confidence in each potential bias, and drafts social media content explaining the causal problems. This is a concrete example of how projects can automate a recurring analytical workflow.
 
-> **Key insight**: Projects let you build a persistent, specialized AI workspace --- like having a research assistant who already knows your methods, your references, and your goals.
-
 ---
 
 ### Connectors and RAG
@@ -347,8 +315,6 @@ Projects become even more powerful with **connectors** --- API integrations that
 An important technical detail: when you upload documents to a project, they enter the **context window** --- the model can "see" them at all times. But when documents are too large, Claude uses **RAG (Retrieval-Augmented Generation)**, which retrieves relevant chunks on demand rather than loading everything at once. Projects have a much larger capacity than individual chats. A 250-page book uses only about 6% of the available space.
 
 Two practical tips. First, the "describe your project" field on the project creation page is **for you, not for Claude** --- the model does not read it. Put your instructions in the project's custom instructions section instead. Second, **name your files descriptively**. Claude reads file names to decide which documents to consult. "reference_paper_labor_markets.pdf" is far more useful than "doc_final_v3.pdf."
-
-> **Key insight**: Name your project files as if a new research assistant is joining your team --- clear, descriptive names help Claude (and future you) find the right document.
 
 ---
 
@@ -416,8 +382,6 @@ Here is a snapshot of a typical Sunday evening. Four AI agents running simultane
 
 Whether this is exciting or unsettling is worth reflecting on. It is shared here not as a recommendation but as an honest observation about where things are heading.
 
-> **Key insight**: We are moving from "AI as a tool you use" to "AI as a team you manage." That shift raises questions we do not yet have answers to.
-
 ---
 
 ## Part II: Limitations and Risks
@@ -436,8 +400,6 @@ We have seen what GenAI can do. Now we confront what can go wrong --- not to dis
 
 The first risk is to **learning itself**. An MIT professor specializing in pedagogy and technology puts it clearly: use AI as a tutor, not as a shortcut. You can use it to find information, challenge your understanding, and test your knowledge. But you cannot skip the struggle. **There is no shortcut to learning** --- the discomfort of not knowing something is precisely what makes learning happen.
 
-> **Key insight**: There is no shortcut to learning. If you skip the struggle, you skip the learning.
-
 ---
 
 ### Process vs. Output
@@ -447,8 +409,6 @@ The first risk is to **learning itself**. An MIT professor specializing in pedag
 A useful framework: always ask whether you care about the **process** or the **output**. A master's thesis is fundamentally about the process --- learning to do research, struggling with methodology, developing judgment. If you automate the process, you destroy the entire purpose.
 
 Once you have acquired expertise, some tasks shift to being output-focused. A senior researcher writing their tenth paper may reasonably automate parts of the execution. But at the learning stage, the process is what matters.
-
-> **Key insight**: Before automating any task, ask: "Am I here for the journey or the destination?" If it is the journey, do not automate it.
 
 ---
 
@@ -461,8 +421,6 @@ Once you have acquired expertise, some tasks shift to being output-focused. A se
 AI threatens **thought diversity**. A professor in Spain asks international students to choose between solution A or B in a business case. Last year, for the first time ever, 100% of students across two classes chose the same answer --- option A. They had all consulted ChatGPT, and ChatGPT recommended the same choice to everyone.
 
 Breakthroughs require diverse thinking. Research shows that professionals from different backgrounds naturally propose different types of solutions --- commercial people favor less technical approaches, R&D people favor more technical ones. This diversity is a *feature*, not a bug. When both groups use AI, their solution distributions converge. The diversity disappears.
-
-> **Key insight**: If everyone uses the same AI and gets the same answer, we lose the diversity of thought that drives innovation and breakthroughs.
 
 ---
 
@@ -500,8 +458,6 @@ In a follow-up attempt, the generated image matched details like the go board in
 
 LLMs exhibit **W.E.I.R.D. bias** --- they over-represent the worldview of Western, Educated, Industrialized, Rich, and Democratic societies. The training data skews heavily toward English-language, Western sources. If you value diversity of perspective --- and you should --- this is a systematic limitation to keep in mind.
 
-> **Key insight**: LLMs reflect one dominant way of seeing the world. They are not neutral or universal.
-
 ---
 
 ### AI Detection Tools
@@ -524,8 +480,6 @@ A real example: someone commented on a LinkedIn article with "Thank you for this
 
 At 99% probability, it is not just "AI-polished." It is straight copy-paste. And the reaction from the recipient? Not gratitude --- annoyance. "That is what I am worth to you?"
 
-> **Key insight**: AI-generated comments and messages communicate one thing clearly: "I did not care enough to write this myself."
-
 ---
 
 ### Over-Reliance and the Jagged Frontier
@@ -543,8 +497,6 @@ Research shows that **over-reliance on AI degrades human performance over time**
 ![](../slides/03_everyday_life/slide-46.png){.slide-image fig-align="center" width="85%"}
 
 The "**Jagged Technological Frontier**" paper gets its name from this exact phenomenon: AI performance is uneven across tasks. In the Boston Consulting Group experiment, AI-assisted consultants performed *worse* on some tasks compared to those working without AI. The frontier is jagged --- sometimes AI helps enormously, sometimes it hurts, and it is hard to predict which tasks fall on which side.
-
-> **Key insight**: AI is not uniformly helpful. On some tasks it makes you much better; on others it makes you worse. The frontier is jagged, and knowing where you stand on it matters.
 
 The limitations are real, but they are not reasons to avoid GenAI --- they are reasons to use it deliberately. That brings us to the final section: ground rules for responsible use.
 
@@ -566,8 +518,6 @@ Two ground rules for the rest of this course and beyond.
 
 **Rule 2: Do it well.** When you use GenAI, do the full cycle: ask a good question, use the right tool, provide the right context, and then **filter the output**. Check quality, verify sources, judge the answer. Using AI poorly is worse than not using it at all.
 
-> **Key insight**: Before every AI interaction, ask two questions: "What do I gain?" and "What do I lose?"
-
 ---
 
 ### Rule 3: Never Copy-Paste Directly
@@ -583,8 +533,6 @@ Two ground rules for the rest of this course and beyond.
 ![](../slides/03_everyday_life/slide-50.png){.slide-image fig-align="center" width="85%"}
 
 **Rule 4: Choose your tasks carefully.** This connects back to the process-versus-output framework. Does automating part of this task destroy its purpose? Should I use AI here at all? These are not questions with universal answers --- they depend on your goals, your stage of learning, and the stakes involved.
-
-> **Key insight**: The most important GenAI skill is not prompting --- it is knowing when *not* to use it.
 
 ---
 

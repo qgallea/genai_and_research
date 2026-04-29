@@ -58,8 +58,6 @@ The science behind those "shower insights" has a name: the **Default Mode Networ
 
 This is why insights often arrive when your attention loosens from the immediate task. Your brain is making connections between ideas that would never meet during focused, linear thinking.
 
-> **Key insight**: Alternating focused work with intentional "off-task" periods can boost creativity. This is not procrastination. It is strategic disengagement.
-
 Hence, the practical takeaway is simple: if you have been stuck on a problem for an hour, the most productive thing you can do might be to go for a walk. Without your phone.
 
 ---
@@ -137,8 +135,6 @@ The real power comes from cycling between these modes throughout the research pr
 Start with open exploration when choosing your research question. Then converge: which question is most promising? Once you have chosen, diverge again on identification strategy, brainstorm multiple approaches before converging on the best one. Then diverge on robustness checks, and converge on which ones to run.
 
 This cycle applies at every stage: research question, identification strategy, data collection, analysis, writing. Each stage gets its own divergent-convergent loop.
-
-> **Key insight**: Avoid judging too early. It kills originality. The worst thing you can do in a brainstorming session is say "that will not work" before the idea has had time to breathe.
 
 ---
 

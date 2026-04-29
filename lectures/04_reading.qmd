@@ -36,8 +36,6 @@ When you read, you also learn a lot about **writing**. Reading top papers by top
 
 Of course, you cannot read everything. Sometimes you just want a specific answer: what was the identifying strategy? What data set did they use? Here, LLMs are powerful --- they can extract the answer quickly so you can decide what deserves a deeper read.
 
-> **Key insight**: Reading research is not just about extracting information. It trains your writing, sharpens your critical thinking, and helps you communicate precisely --- skills that no LLM can build for you.
-
 Beyond academia, understanding research matters in everyday life. Misinterpreted research in the news is everywhere --- reporters and politicians claiming "research has shown" when, in the vast majority of cases, they are confusing correlation with causation.
 
 ---
@@ -98,8 +96,6 @@ In economics, the **top five** journals (AER, Econometrica, JPE, QJE, REStud) ar
 
 The **impact factor** (IF) measures the average number of citations per paper published in a journal over the previous two years. A QJE paper receives about 19 citations on average; Nature about 50. However, IF varies enormously across fields --- energy research and medicine naturally produce higher citation counts than niche economics subfields. So IF is a useful proxy, but it must be interpreted within the context of a discipline.
 
-> **Key insight**: Impact factor is a signal, not a verdict. Always compare within the same field, and watch out for sub-journals that look like the flagship.
-
 Journal quality rankings like the **ABS list** can also help. Journals rated four stars are genuinely top-tier. Anything below three stars is lower-tier and may not have gone through equally rigorous review. Researchers typically aim for the best journal first and work downward --- so a paper in a weak journal may be there for a reason.
 
 ---
@@ -135,8 +131,6 @@ The first pass is about getting the gist quickly. Read the **title**, the **abst
 In practice, even within the introduction, you do not need to read every word. Read the first sentence of each paragraph, then stop on sections that matter to you --- the data set, the econometric strategy, the specific result. Look at **figures and tables** too: they are designed to illustrate the paper's punchline.
 
 Be mindful that there is a lot of **marketing in research**. Titles are designed to be catchy and memorable: "The Jagged Technological Frontier," "Make Trade Not War," "Saving the World from the Couch." Abstracts are crafted to be impactful. This is not dishonest --- it is how academic communication works --- but it means you need to go beyond the title and abstract to judge substance.
-
-> **Key insight**: After the first pass, you should know the main research question, how they answered it, and what the key limitations are. If you know this, you know whether to go further.
 
 ---
 
@@ -187,8 +181,6 @@ Notably, **NotebookLM** was not tricked by this simple prompt injection. This is
 ![](../slides/04_reading/slide-18.png){.slide-image fig-align="center" width="85%"}
 
 The second main challenge is **hallucination**. When doing research, you need precise, reliable answers. If you upload a paper directly to an LLM, the paper is in the **context window** --- the model can "read" it directly rather than trying to recall something from its training data. This is more reliable than asking about a paper from memory, but it is still not immune to misinterpretation.
-
-> **Key insight**: An LLM recalling a paper from training data is like you trying to remember something you read months ago. Uploading the paper puts it right in front of the model --- much more reliable, but still not perfect.
 
 This is why **NotebookLM** is particularly powerful for research reading: it constrains answers to your uploaded sources and lets you verify every claim by checking the original passage.
 
@@ -265,8 +257,6 @@ The class debrief surfaced several important points about the paper's methodolog
 **SUTVA and spillover concerns.** A sharp observation from the class: if AI reduces demand for high-exposure freelance jobs, displaced workers might migrate to lower-exposure job categories, artificially inflating demand in the control group. This relates to the **Stable Unit Treatment Value Assumption (SUTVA)** --- the assumption that treatment of one group does not affect the other. The instructor found this an interesting point worth thinking through further: the control group would not be stable but rather positively affected by displaced workers, which could amplify the measured treatment effect. However, the overall effect captured is still meaningful --- it is just that the magnitude might be somewhat inflated.
 
 **The COVID overhiring confound.** One of the most important threats to identification --- and one that NotebookLM did not flag --- is that the jobs most exposed to AI are also the jobs that were arguably overhired during COVID (remote-friendly, computer-based tasks). The post-ChatGPT decline in these jobs might partly reflect a market correction from COVID-era overhiring, not purely an AI effect. However, a COVID correction would be a slow-moving trend, not a sudden shock coinciding precisely with ChatGPT's launch in November 2022. The likely reality: the AI effect is real, but it may be somewhat amplified by this underlying confound.
-
-> **Key insight**: A strong research design does not eliminate all threats. Even a well-executed diff-in-diff can be challenged on SUTVA violations, confounding trends, and measurement choices. The value of deep reading is learning to identify these threats yourself.
 
 ## When to Use AI --- and When Not To
 
