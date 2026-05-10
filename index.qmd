@@ -38,8 +38,8 @@ The goal is not just to *use* these tools, but to use them **responsibly and rig
 | 06 | [Skills: Building Reusable AI Tools](lectures/06_skills.qmd) | Available |
 | 07 | [Creativity & Brainstorming](lectures/07_creativity.qmd) | Available |
 | 08 | [Coding & Data Analysis](lectures/08_coding.qmd) | Available |
-| 09 | [Deep Research mode](lectures/09_deep_research.qmd) | **New — now available** |
-| 10 | [Scientific Writing](lectures/10_writing.qmd) | Coming soon |
+| 09 | [Deep Research mode](lectures/09_deep_research.qmd) | Available |
+| 10 | [Scientific Writing](lectures/10_writing.qmd) | **New — now available** |
 | 11 | [Paper Review / Referee](lectures/11_paper_review.qmd) | Coming soon |
 | 12 | [Presenting](lectures/12_presenting.qmd) | Coming soon |
 | 13 | [Claude Code & Agentic AI](lectures/13_agentic_ai.qmd) | Coming soon |
