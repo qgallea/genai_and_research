@@ -42,7 +42,7 @@ The goal is not just to *use* these tools, but to use them **responsibly and rig
 | 10 | [Scientific Writing](lectures/10_writing.qmd) | Available |
 | 11 | [Paper Review / Referee](lectures/11_paper_review.qmd) | **New — now available** |
 | 12 | [Presenting](lectures/12_presenting.qmd) | Coming soon |
-| 13 | [Claude Code & Agentic AI](lectures/13_agentic_ai.qmd) | Coming soon |
+| 13 | [Claude Code & Agentic AI](lectures/13_agentic_ai.qmd) | **New — now available** |
 
 : {.session-table}
 
