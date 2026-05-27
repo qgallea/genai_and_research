@@ -38,10 +38,10 @@ website:
             href: lectures/10_writing.qmd
           - text: "11 — Paper Review / Referee"
             href: lectures/11_paper_review.qmd
-          - text: "12 — Presenting"
-            href: lectures/12_presenting.qmd
-          - text: "13 — Claude Code & Agentic AI"
+          - text: "12 — Claude Code & Agentic AI"
             href: lectures/13_agentic_ai.qmd
+          - text: "13 — What's Next: Careers in the GenAI Era"
+            href: lectures/13_careers.qmd
   page-footer:
     center: "GenAI & Research — Quentin Gallea — [The Causal Mindset](https://thecausalmindset.com/)"
 

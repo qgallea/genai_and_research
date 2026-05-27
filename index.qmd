@@ -41,10 +41,20 @@ The goal is not just to *use* these tools, but to use them **responsibly and rig
 | 09 | [Deep Research mode](lectures/09_deep_research.qmd) | Available |
 | 10 | [Scientific Writing](lectures/10_writing.qmd) | Available |
 | 11 | [Paper Review / Referee](lectures/11_paper_review.qmd) | **New — now available** |
-| 12 | [Presenting](lectures/12_presenting.qmd) | Coming soon |
-| 13 | [Claude Code & Agentic AI](lectures/13_agentic_ai.qmd) | **New — now available** |
+| 12 | [Claude Code & Agentic AI](lectures/13_agentic_ai.qmd) | **New — now available** |
+| 13 | [What's Next: Careers in the GenAI Era](lectures/13_careers.qmd) | Coming soon |
 
 : {.session-table}
+
+## What's Next: Careers in the GenAI Era
+
+If GenAI can write papers, what does it mean to be a researcher — and what does a career in research look like from here?
+
+The course closes with a session devoted to that question. The motivation is simple: every previous session showed how a piece of the research workflow can be done faster, or differently, or partly by an agent. Put those pieces together and the role of the human researcher has clearly shifted. The closing session asks where the human edge actually lies — taste, judgment, framing, causal reasoning, knowing what is worth doing — and how to deliberately build those skills while the tooling keeps moving.
+
+We will also hear from an external guest speaker, a recent master's graduate who wrote his thesis on rethinking careers in the age of GenAI. He will share a concrete **playbook** for staying relevant in the labour market as the technology evolves: which skills compound, which ones are about to be commoditised, and how to position your work so that GenAI is a multiplier rather than a substitute.
+
+This is not a forecast — nobody knows what the job market for researchers looks like in five years. But the goal of the entire course has been to give you the lens, the vocabulary, and the practical instincts to keep adapting. The closing session is where we tie that back to your own next steps.
 
 ## Author
 
