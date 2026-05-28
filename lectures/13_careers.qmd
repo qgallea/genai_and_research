@@ -1,5 +1,109 @@
 ---
 title: "What's Next: Careers in the GenAI Era"
+subtitle: "Session 13 — GenAI & Research"
 ---
 
-*Lecture materials coming soon — closing session with an external guest speaker on a playbook for staying relevant in the labour market as GenAI evolves.*
+::: {.callout-note}
+## Lecture Overview
+Closing session of the course: how to stay relevant as a researcher when the tools keep moving. We do not know what the labour market for research will look like in five years — but the bet of this course is that three things hold up regardless of which model ships next. **Literacy**, a **framework** (*Before / During / After*) for deciding when GenAI is appropriate and what stays human, and a **causal mindset** for questioning evidence. This page reviews those three pillars and previews the guest playbook on careers.
+:::
+
+## What Now?
+
+Honest answer: we do not know.
+
+New models drop every few months. New agents change what "a researcher" even does in a given afternoon. Anthropic, OpenAI, Google, DeepSeek, Mistral — the leaderboard reshuffles, the prices fall, the capabilities widen, the policies shift. Two years ago this course would have been half the material. Two years from now it will look different again.
+
+So instead of trying to teach you a tool, the course has tried to teach you three things that are *durable* across whatever comes next. Take these with you; the specific tools, you can always look up.
+
+::: {.callout-tip}
+## Three pillars that outlast any specific tool
+1. **Literacy** — enough understanding of what GenAI *is* to read the room when something new ships, and enough fluency to pick it up fast.
+2. **A framework for using tools** — the *Before / During / After* lens — to decide *when* GenAI is appropriate and *what stays human*.
+3. **A way to question evidence** — the **causal mindset** — to evaluate impact, both your own and the AI's.
+:::
+
+---
+
+## Pillar 1 — Literacy
+
+You do not need to be able to train a transformer. You need to be able to **read the announcement of a new model, the README of a new agent, the policy update of an AI lab, and roughly know what it means for your work**. That is the goal of literacy. Without it, every news cycle is intimidating. With it, you can absorb a new tool in an afternoon.
+
+### What GenAI actually is
+
+We started with the basics in **Session 01 — [The AI Revolution](01_intro.qmd)**: what makes *generative* AI different from the previous wave of machine learning, why now, and the broad strokes of how it is reshaping science, the economy, and how we work. Key idea: GenAI is not magic, and it is not search. It is statistical text completion at very large scale — extraordinarily useful when you understand what that means.
+
+### How LLMs work, in just enough detail
+
+In **Session 02 — [Deep Dive into LLMs](02_deep_dive.qmd)** we opened the box: tokenisation, the transformer, pretraining on huge text corpora, supervised fine-tuning, and reinforcement learning from human feedback (RLHF). The point was not to make you an ML engineer. The point was that **knowing roughly how the model was built tells you what to trust and what to verify**: why it hallucinates, why it is sensitive to prompts, why it sometimes refuses, why two versions of the same model can disagree.
+
+### Strengths, limits, and the moving frontier
+
+**Sessions 03 — [Everyday Life with GenAI](03_everyday_life.qmd)** and the running thread across the rest of the course built out the practical picture: what current models are reliably good at, where they confidently fail, and how fast that line is moving. Literacy here is not a static checklist — it is the *habit* of asking "what can this thing actually do today, and how would I know if it changed?".
+
+::: {.callout-note}
+## Why literacy beats tool-by-tool memorisation
+Specific shortcuts, slash commands, and UI quirks change every release. The underlying mechanics — tokens, context windows, training objectives, the gap between fluency and accuracy — change much more slowly. If you understand the mechanics, every new tool is a five-minute read; if you only know the buttons, every new tool is a relearning project.
+:::
+
+---
+
+## Pillar 2 — The Before / During / After Framework
+
+If literacy is the *what*, this is the *how*. The framework appeared in every single session, applied to a different research task. The structure stays the same:
+
+- **BEFORE.** Should I use GenAI for this at all? Do I care primarily about the **process** (learning, building a skill, owning the reasoning) or the **outcome** (just get the artefact)? If only the outcome, automation is on the table. If the process matters, GenAI may be a tutor — but it cannot replace the doing.
+- **DURING — Filter In.** Give the model what it needs to succeed: the right *prompt*, the right *tool* (a chatbot? a skill? an agent? a deep-research run?), and the right *sources* (the actual paper, the actual data, the actual codebase — not the model's foggy memory of them).
+- **DURING — Filter Out.** Check what comes back. Verify the output, the sources it claims, the interpretation, the quality. Fluency is not accuracy. Confidence is not correctness.
+- **AFTER.** Did this work? Was it worth it? Did you gain time, or did verification eat the savings? Adjust your prompt, your sources, your skill, your agent — so next time is better.
+
+### Where we applied it
+
+The same lens, applied across the full research cycle:
+
+| Stage | Session | What changes with GenAI |
+|-------|---------|--------------------------|
+| Reading papers | [04 — Reading](04_reading.qmd) | Faster orientation; you still have to read the paper |
+| Literature review | [05 — Literature Review](05_lit_review.qmd) | Semantic search, citation graphs, RAG — but coverage and verification stay yours |
+| Custom tools | [06 — Skills](06_skills.qmd) | Encode your own workflow once, reuse across sessions |
+| Ideation | [07 — Creativity](07_creativity.qmd) | A brainstorming partner, not an oracle |
+| Coding & data | [08 — Coding](08_coding.qmd) | Code generation, debugging, agentic analysis — with human-in-the-loop validation |
+| Deep research | [09 — Deep Research](09_deep_research.qmd) | Multi-step research agents that pull and synthesise sources |
+| Writing | [10 — Writing](10_writing.qmd) | Drafting, editing, and the ethical edges of disclosure |
+| Refereeing | [11 — Paper Review](11_paper_review.qmd) | LLM-as-co-pilot helps; LLM-as-judge does not |
+| Agentic | [12 — Claude Code & Agentic AI](13_agentic_ai.qmd) | Bigger tasks, more autonomy — *more* careful instructions and verification, not less |
+
+### What the framework actually buys you
+
+It is a **decision procedure**. Faced with any new tool — a model you have never used, a skill someone wrote last week, an agent your colleague is excited about — you have the same four questions to run. Process or outcome? What does it need to do this well? How will I verify the result? What did I learn for next time?
+
+::: {.callout-note}
+## What stays human
+The framework is most useful in answering this. Anything where the *process* is the point — building a research instinct, owning the causal story, knowing the literature in your bones — should not be automated even if it could be. The output exists to grow you, not the other way around. Everything else is fair game for delegation.
+:::
+
+---
+
+## Pillar 3 — The Causal Mindset
+
+Literacy tells you what the tool is. The framework tells you when and how to use it. The causal mindset tells you whether to **believe the result** — yours, the model's, or anyone else's.
+
+Causal inference is the discipline of asking the right questions of evidence: what would have happened otherwise? What is correlation and what is cause? What are the confounders? What is the counterfactual? These questions matter more, not less, in a world where GenAI can produce a polished, confident, beautifully formatted argument for almost any conclusion you nudge it toward.
+
+We did not have a full session on this — it is the subject of [The Causal Mindset](https://thecausalmindset.com/){target="_blank"} and a course on its own. But the habit travelled through every session: do not confuse a fluent answer for a correct one; do not confuse a benchmark for a real-world claim; do not confuse "many sources cite this" for "this is true". When the model gives you an answer, ask what would convince you it was wrong.
+
+---
+
+## What's Next: The Guest Playbook
+
+The course closes with an external guest speaker — a recent master's graduate who wrote his thesis on rethinking careers in the age of GenAI. He will share a concrete **playbook** for staying relevant in the labour market as the technology evolves: which skills compound, which are about to be commoditised, and how to position your work so GenAI is a multiplier rather than a substitute.
+
+That playbook is not a forecast. Nobody knows what the job market for researchers looks like in five years. But combined with the three pillars above — literacy, framework, causal mindset — it is the closest thing to a survival kit this course can give you.
+
+::: {.callout-tip}
+## Closing takeaways
+1. **You will not predict the next tool.** You can be ready for any tool.
+2. **The framework is the deliverable.** Before / During / After is what you take into your next job, your next paper, your next year.
+3. **What stays human is what makes the work yours.** Decide that deliberately, not by default.
+4. **Question every result — including this course's.** That is what the causal mindset is for.
+:::
