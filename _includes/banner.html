@@ -7,11 +7,11 @@
         Claude Code for Research
       </a>
     </span>
-    <button class="banner-toggle" aria-expanded="false" aria-controls="banner-details" onclick="toggleBannerDetails()">
+    <button class="banner-toggle" id="banner-toggle-btn" aria-expanded="false" aria-controls="banner-details">
       Learn more &#9662;
     </button>
   </div>
-  <div id="banner-details" class="banner-details" hidden>
+  <div id="banner-details" class="banner-details">
     <p>
       Agentic AI is where the frontier is happening. Some top researchers are already using it to accelerate their work — others don't know where to start. This course takes you from zero to frontier-level research workflows with Claude Code.
     </p>
@@ -21,18 +21,41 @@
   </div>
 </div>
 <script>
-function toggleBannerDetails() {
-  var details = document.getElementById('banner-details');
-  var btn = document.querySelector('.banner-toggle');
-  var isHidden = details.hasAttribute('hidden');
-  if (isHidden) {
-    details.removeAttribute('hidden');
-    btn.setAttribute('aria-expanded', 'true');
-    btn.innerHTML = 'Less &#9652;';
-  } else {
-    details.setAttribute('hidden', '');
-    btn.setAttribute('aria-expanded', 'false');
-    btn.innerHTML = 'Learn more &#9662;';
+(function() {
+  var banner   = document.getElementById('promo-banner');
+  var details  = document.getElementById('banner-details');
+  var btn      = document.getElementById('banner-toggle-btn');
+  var navbar   = null;
+  var expanded = false;
+
+  function recalc() {
+    if (!navbar) navbar = document.querySelector('nav.navbar');
+    var h = banner.offsetHeight;
+    if (navbar) navbar.style.top = h + 'px';
+    document.body.style.paddingTop = (h + (navbar ? navbar.offsetHeight : 56)) + 'px';
   }
-}
+
+  btn.addEventListener('click', function() {
+    expanded = !expanded;
+    if (expanded) {
+      details.style.maxHeight = details.scrollHeight + 'px';
+      btn.setAttribute('aria-expanded', 'true');
+      btn.innerHTML = 'Less &#9652;';
+    } else {
+      details.style.maxHeight = '0';
+      btn.setAttribute('aria-expanded', 'false');
+      btn.innerHTML = 'Learn more &#9662;';
+    }
+    // Recalc after CSS transition
+    setTimeout(recalc, 320);
+  });
+
+  // Initial layout: run after Quarto finishes rendering
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() { setTimeout(recalc, 50); });
+  } else {
+    setTimeout(recalc, 50);
+  }
+  window.addEventListener('resize', recalc);
+})();
 </script>
