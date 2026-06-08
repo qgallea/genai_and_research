@@ -1,5 +1,150 @@
 /* GenAI & Research — Course Website Styles */
 
+/* ── Promo banner (site-wide) ────────────────────────────────── */
+#promo-banner {
+  background-color: #5B2D8E;
+  color: #fff;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  position: relative;
+  z-index: 1040;          /* above Quarto navbar (1030) */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+#promo-banner .banner-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.55rem 1rem;
+  flex-wrap: wrap;
+}
+
+#promo-banner .banner-text {
+  color: #fff;
+}
+
+#promo-banner .banner-text a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 700;
+}
+
+#promo-banner .banner-text a:hover {
+  color: #e0d4f5;
+}
+
+#promo-banner .banner-toggle {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 4px;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+#promo-banner .banner-toggle:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+#promo-banner .banner-details {
+  background: #4a2378;
+  padding: 0.8rem 1.5rem 1rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+#promo-banner .banner-details p {
+  margin: 0 0 0.6rem;
+  font-size: 0.9rem;
+  color: #e8dff5;
+}
+
+#promo-banner .banner-cta-btn {
+  display: inline-block;
+  background: #fff;
+  color: #5B2D8E;
+  font-weight: 700;
+  padding: 0.4rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.2s, transform 0.1s;
+}
+
+#promo-banner .banner-cta-btn:hover {
+  background: #f0e6ff;
+  transform: translateY(-1px);
+}
+
+/* ── Lecture CTA (end of each session page) ──────────────────── */
+.lecture-cta {
+  margin: 3rem 0 2rem;
+  padding: 0;
+}
+
+.lecture-cta-inner {
+  background: linear-gradient(135deg, #5B2D8E 0%, #3a1a5e 100%);
+  color: #fff;
+  border-radius: 10px;
+  padding: 2rem 2.2rem;
+  text-align: center;
+}
+
+.lecture-cta-icon {
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+.lecture-cta-inner h3 {
+  margin: 0 0 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.lecture-cta-inner p {
+  color: #e0d4f5;
+  font-size: 0.95rem;
+  margin: 0 auto 0.6rem;
+  max-width: 560px;
+  line-height: 1.55;
+}
+
+.lecture-cta-btn {
+  display: inline-block;
+  margin-top: 0.8rem;
+  background: #fff;
+  color: #5B2D8E;
+  font-weight: 700;
+  padding: 0.6rem 1.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.lecture-cta-btn:hover {
+  background: #f0e6ff;
+  color: #5B2D8E;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .lecture-cta-inner {
+    padding: 1.5rem 1.2rem;
+  }
+  #promo-banner .banner-main {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}
+
 /* Slide images */
 .slide-image {
   display: block;

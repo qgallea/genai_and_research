@@ -1,0 +1,30 @@
+<!-- End-of-lecture CTA — Claude Code for Research -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Only inject on lecture pages
+  if (window.location.pathname.indexOf('/lectures/') === -1) return;
+
+  var cta = document.createElement('div');
+  cta.className = 'lecture-cta';
+  cta.innerHTML = '' +
+    '<div class="lecture-cta-inner">' +
+      '<div class="lecture-cta-icon">&#x1F680;</div>' +
+      '<h3>Go further with Claude Code for Research</h3>' +
+      '<p>' +
+        'Agentic AI is where the frontier is happening. Some top researchers are already using it to run literature searches, build analysis pipelines, and draft papers — others don\'t know where to start.' +
+      '</p>' +
+      '<p>' +
+        'I offer a full course on Claude Code to take you from here to frontier work with agentic AI in research.' +
+      '</p>' +
+      '<a href="https://thecausalmindset.com/training/claude-code-for-research" target="_blank" rel="noopener" class="lecture-cta-btn">' +
+        'Join Claude Code for Research &rarr;' +
+      '</a>' +
+    '</div>';
+
+  // Insert before the page footer / after main content
+  var main = document.querySelector('main.content') || document.querySelector('#quarto-content') || document.querySelector('.quarto-body');
+  if (main) {
+    main.appendChild(cta);
+  }
+});
+</script>

@@ -1,0 +1,38 @@
+<!-- Site-wide promo banner — Claude Code for Research -->
+<div id="promo-banner">
+  <div class="banner-main">
+    <span class="banner-text">
+      <strong>New course:</strong> Join
+      <a href="https://thecausalmindset.com/training/claude-code-for-research" target="_blank" rel="noopener">
+        Claude Code for Research
+      </a>
+    </span>
+    <button class="banner-toggle" aria-expanded="false" aria-controls="banner-details" onclick="toggleBannerDetails()">
+      Learn more &#9662;
+    </button>
+  </div>
+  <div id="banner-details" class="banner-details" hidden>
+    <p>
+      Agentic AI is where the frontier is happening. Some top researchers are already using it to accelerate their work — others don't know where to start. This course takes you from zero to frontier-level research workflows with Claude Code.
+    </p>
+    <a href="https://thecausalmindset.com/training/claude-code-for-research" target="_blank" rel="noopener" class="banner-cta-btn">
+      Join the course &rarr;
+    </a>
+  </div>
+</div>
+<script>
+function toggleBannerDetails() {
+  var details = document.getElementById('banner-details');
+  var btn = document.querySelector('.banner-toggle');
+  var isHidden = details.hasAttribute('hidden');
+  if (isHidden) {
+    details.removeAttribute('hidden');
+    btn.setAttribute('aria-expanded', 'true');
+    btn.innerHTML = 'Less &#9652;';
+  } else {
+    details.setAttribute('hidden', '');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = 'Learn more &#9662;';
+  }
+}
+</script>

@@ -53,3 +53,5 @@ format:
     toc: true
     toc-depth: 3
     smooth-scroll: true
+    include-before-body: _includes/banner.html
+    include-after-body: _includes/cta.html
