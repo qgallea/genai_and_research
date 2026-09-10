@@ -1,23 +1,16 @@
 /* GenAI & Research — Course Website Styles */
 
 /* ── Promo banner (site-wide) ────────────────────────────────── */
-/* Banner is position:fixed at top:0, full-width, above the navbar.
-   JS in banner.html pushes the navbar down and adjusts body padding
-   so nothing overlaps. The expanded panel animates via max-height
-   and stays in flow (pushes content, never overlays). */
+/* JS in banner.html moves the banner inside Quarto's fixed header, above
+   the navbar, so Quarto's body padding accounts for it and nothing overlaps.
+   The expanded panel animates via max-height and pushes content down. */
 
 #promo-banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
   background-color: #5B2D8E;
   color: #fff;
   text-align: center;
   font-size: 0.95rem;
   line-height: 1.5;
-  z-index: 1040;          /* above Quarto navbar (1030) */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 #promo-banner .banner-main {

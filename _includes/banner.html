@@ -25,15 +25,14 @@
   var banner   = document.getElementById('promo-banner');
   var details  = document.getElementById('banner-details');
   var btn      = document.getElementById('banner-toggle-btn');
-  var navbar   = null;
+  var header   = document.getElementById('quarto-header');
   var expanded = false;
 
-  function recalc() {
-    if (!navbar) navbar = document.querySelector('nav.navbar');
-    var h = banner.offsetHeight;
-    if (navbar) navbar.style.top = h + 'px';
-    document.body.style.paddingTop = (h + (navbar ? navbar.offsetHeight : 56)) + 'px';
-  }
+  // Move the banner inside Quarto's fixed header so Quarto's own offset logic
+  // (body padding, TOC position, anchor scrolling) includes the banner height.
+  // Quarto re-measures the header on resize, so expanding the banner pushes
+  // the page content down automatically.
+  if (header) header.insertBefore(banner, header.firstChild);
 
   btn.addEventListener('click', function() {
     expanded = !expanded;
@@ -46,16 +45,6 @@
       btn.setAttribute('aria-expanded', 'false');
       btn.innerHTML = 'Learn more &#9662;';
     }
-    // Recalc after CSS transition
-    setTimeout(recalc, 320);
   });
-
-  // Initial layout: run after Quarto finishes rendering
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() { setTimeout(recalc, 50); });
-  } else {
-    setTimeout(recalc, 50);
-  }
-  window.addEventListener('resize', recalc);
 })();
 </script>
